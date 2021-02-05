@@ -34,8 +34,10 @@
 const fs = require('fs');
 let serverOptions = {
   hostName: "localhost",
-  listenPort: 3000,
-  useHttps: false
+  listenPort: process.env.PORT || 80,
+  useHttps: true,
+  httpsKeyFile: '/etc/letsencrypt/live/azure.howardchung.net/privkey.pem',
+  httpsCertFile: '/etc/letsencrypt/live/azure.howardchung.net/fullchain.pem'
 };
 let sslOptions = {};
 if (serverOptions.useHttps) {
@@ -407,7 +409,7 @@ const mediasoupOptions = {
   // WebRtcTransport settings
   webRtcTransport: {
     listenIps: [
-      { ip: '127.0.0.1', announcedIp: null }
+      { ip: '0.0.0.0', announcedIp: process.env.EXTERNAL_IP }
     ],
     enableUdp: true,
     enableTcp: true,
@@ -513,7 +515,7 @@ function removeAllConsumers() {
 async function createTransport() {
   const transport = await router.createWebRtcTransport(mediasoupOptions.webRtcTransport);
   console.log('-- create transport id=' + transport.id);
-
+  console.log(transport.iceCandidates);
   return {
     transport: transport,
     params: {

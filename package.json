@@ -9,7 +9,8 @@
     "loopback": "node mediasoup_v3_loopback.js",
     "broadcast": "node mediasoup_v3_broadcast.js",
     "multiparty": "node mediasoup_v3_multiparty.js",
-    "multiroom": "node mediasoup_v3_multiroom.js"
+    "multiroom": "node mediasoup_v3_multiroom.js",
+    "start": "EXTERNAL_IP=$(curl https://api.ipify.org) npm run broadcast"
   },
   "keywords": [
     "webrtc"

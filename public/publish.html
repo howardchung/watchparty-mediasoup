@@ -37,6 +37,8 @@
   </div>
 </body>
 <script>
+// document.getElementById('start_video_button').addEventListener('click', startMedia);
+// document.getElementById('publish_button').addEventListener('click', publish);
   const localVideo = document.getElementById('local_video');
   const stateSpan = document.getElementById('state_span');
   let localStream = null;
@@ -185,6 +187,35 @@
       .catch(err => {
         console.error('media ERROR:', err);
       });
+
+    // Create an input element
+    // const inputElement = document.createElement('input');
+
+    // // Set its type to file
+    // inputElement.type = 'file';
+
+    // // Set accept to the file types you want the user to select.
+    // // Include both the file extension and the mime type
+    // // inputElement.accept = accept;
+
+    // // set onchange event to call callback when user has selected file
+    // inputElement.addEventListener('change', () => {
+    //   const file = inputElement.files[0];
+    //   const leftVideo = document.getElementById(
+    //     'local_video'
+    //   );
+    //   leftVideo.srcObject = null;
+    //   leftVideo.src = URL.createObjectURL(file);
+    //   // leftVideo.src = 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Spring_-_Blender_Open_Movie.webm';
+    //   leftVideo.play();
+    //   const stream = leftVideo.captureStream();
+    //   localStream = stream;
+    //   playVideo(localVideo, stream);
+    //   updateButtons();
+    // });
+
+    // dispatch a click event to open the file dialog
+    // inputElement.dispatchEvent(new MouseEvent('click'));
   }
 
   function stopMedia() {
@@ -375,5 +406,4 @@
   updateButtons();
   console.log('=== ready ==='); 
 </script>
-
 </html>
