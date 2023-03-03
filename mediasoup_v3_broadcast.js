@@ -58,13 +58,13 @@ let webServer = null;
 if (serverOptions.useHttps) {
   // -- https ---
   webServer = https.createServer(sslOptions, app).listen(webPort, function () {
-    console.log('Web server start. https://' + serverOptions.hostName + ':' + webServer.address().port + '/');
+    console.log('Web server start. https://' + serverOptions.hostName + ':' + serverOptions.listenPort + '/');
   });
 }
 else {
   // --- http ---
   webServer = http.Server(app).listen(webPort, function () {
-    console.log('Web server start. http://' + serverOptions.hostName + ':' + webServer.address().port + '/');
+    console.log('Web server start. http://' + serverOptions.hostName + ':' + serverOptions.listenPort + '/');
   });
 }
 
@@ -88,7 +88,7 @@ function isFileExist(path) {
 
 // --- socket.io server ---
 const io = require('socket.io')(webServer);
-console.log('socket.io server start. port=' + webServer.address().port);
+console.log('socket.io server start. port=' + serverOptions.listenPort);
 
 io.on('connection', function (socket) {
   console.log('client connected. socket id=' + getId(socket) + '  , total clients=' + getClientCount());

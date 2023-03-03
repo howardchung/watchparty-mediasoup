@@ -177,9 +177,24 @@
 
     const useVideo = checkUseVideo();
     const useAudio = checkUseAudio();
+    
+    // Screenshare instead
+    // const media = navigator.mediaDevices.getUserMedia({ audio: useAudio, video: useVideo });
+    const media = navigator.mediaDevices.getDisplayMedia(
+      { 
+        video: { height: 720, logicalSurface: true },
+        audio: {
+          autoGainControl: false,
+          channelCount: 2,
+          echoCancellation: false,
+          latency: 0,
+          noiseSuppression: false,
+          sampleRate: 48000,
+          sampleSize: 16,
+        }}
+    );
 
-    navigator.mediaDevices.getUserMedia({ audio: useAudio, video: useVideo })
-      .then((stream) => {
+    media.then((stream) => {
         localStream = stream;
         playVideo(localVideo, localStream);
         updateButtons();
