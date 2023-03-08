@@ -1,29 +1,23 @@
+const fs = require('fs');
 const sio = require("socket.io");
 const mediasoup = require('mediasoup');
+const https = require('https');
 
-const io = new sio.Server();
-
-// --- read options ---
 let serverOptions = {
-  hostName: "localhost",
   listenPort: process.env.PORT || 80,
-  // useHttps: true,
-  // httpsKeyFile: '/etc/letsencrypt/live/azure.howardchung.net/privkey.pem',
-  // httpsCertFile: '/etc/letsencrypt/live/azure.howardchung.net/fullchain.pem'
 };
-// let sslOptions = {};
-// if (serverOptions.useHttps) {
-//   sslOptions.key = fs.readFileSync(serverOptions.httpsKeyFile).toString();
-//   sslOptions.cert = fs.readFileSync(serverOptions.httpsCertFile).toString();
-// }
+const server = https.createServer({ 
+  key:fs.readFileSync('/etc/letsencrypt/live/azure.howardchung.net/privkey.pem').toString(),
+  cert: fs.readFileSync('/etc/letsencrypt/live/azure.howardchung.net/fullchain.pem').toString(),
+}).listen(serverOptions.listenPort);
 
-io.listen(serverOptions.listenPort);
 // --- socket.io server ---
+const io = sio(server);
 console.log('socket.io server start. port=' + serverOptions.listenPort);
 
-// TODO handle multiple rooms
-io.on('connection', function (socket) {
-  console.log('client connected. socket id=' + getId(socket));
+const workspaces = io.of(/^\/.*/);
+workspaces.on('connection', function (socket) {
+  console.log('client connected. socket id=' + getId(socket), 'namespace=' + socket.nsp);
 
   socket.on('disconnect', function () {
     // close user connection
