@@ -1,101 +1,33 @@
-//
-// mediasoup_sample
-//   https://github.com/mganeko/mediasoup_v3_example
-//   mediasoup_v3_example is provided under MIT license
-//
-//   This sample is using https://github.com/versatica/mediasoup
-//
-//   Thanks To:
-//     - https://lealog.hateblo.jp/entry/2019/03/25/180850
-//     - https://lealog.hateblo.jp/entry/2019/02/25/144511
-//     - https://github.com/leader22/mediasoup-demo-v3-simple/tree/master/server
-//     - https://github.com/mkhahani/mediasoup-sample-app
-//     - https://github.com/daily-co/mediasoup-sandbox
-//
-// install
-//   npm install socket.io
-//   npm install express
-//   npm install socket.io
-//   npm install mediasoup@3
-//   npm install mediasoup-client@3
-//   npm install browserify
-// or
-//   npm install
-//
-// setup
-//   npm run build-client
-//
-// run
-//   npm run broadcast
+const sio = require("socket.io");
+const mediasoup = require('mediasoup');
 
-'use strict';
+const io = new sio.Server();
 
 // --- read options ---
-const fs = require('fs');
 let serverOptions = {
   hostName: "localhost",
   listenPort: process.env.PORT || 80,
-  useHttps: true,
-  httpsKeyFile: '/etc/letsencrypt/live/azure.howardchung.net/privkey.pem',
-  httpsCertFile: '/etc/letsencrypt/live/azure.howardchung.net/fullchain.pem'
+  // useHttps: true,
+  // httpsKeyFile: '/etc/letsencrypt/live/azure.howardchung.net/privkey.pem',
+  // httpsCertFile: '/etc/letsencrypt/live/azure.howardchung.net/fullchain.pem'
 };
-let sslOptions = {};
-if (serverOptions.useHttps) {
-  sslOptions.key = fs.readFileSync(serverOptions.httpsKeyFile).toString();
-  sslOptions.cert = fs.readFileSync(serverOptions.httpsCertFile).toString();
-}
+// let sslOptions = {};
+// if (serverOptions.useHttps) {
+//   sslOptions.key = fs.readFileSync(serverOptions.httpsKeyFile).toString();
+//   sslOptions.cert = fs.readFileSync(serverOptions.httpsCertFile).toString();
+// }
 
-// --- prepare server ---
-const http = require("http");
-const https = require("https");
-const express = require('express');
-
-const app = express();
-const webPort = serverOptions.listenPort;
-app.use(express.static('public'));
-
-let webServer = null;
-if (serverOptions.useHttps) {
-  // -- https ---
-  webServer = https.createServer(sslOptions, app).listen(webPort, function () {
-    console.log('Web server start. https://' + serverOptions.hostName + ':' + serverOptions.listenPort + '/');
-  });
-}
-else {
-  // --- http ---
-  webServer = http.Server(app).listen(webPort, function () {
-    console.log('Web server start. http://' + serverOptions.hostName + ':' + serverOptions.listenPort + '/');
-  });
-}
-
-// --- file check ---
-function isFileExist(path) {
-  try {
-    fs.accessSync(path, fs.constants.R_OK);
-    //console.log('File Exist path=' + path);
-    return true;
-  }
-  catch (err) {
-    if (err.code === 'ENOENT') {
-      //console.log('File NOT Exist path=' + path);
-      return false
-    }
-  }
-
-  console.error('MUST NOT come here');
-  return false;
-}
-
+io.listen(serverOptions.listenPort);
 // --- socket.io server ---
-const io = require('socket.io')(webServer);
 console.log('socket.io server start. port=' + serverOptions.listenPort);
 
+// TODO handle multiple rooms
 io.on('connection', function (socket) {
-  console.log('client connected. socket id=' + getId(socket) + '  , total clients=' + getClientCount());
+  console.log('client connected. socket id=' + getId(socket));
 
   socket.on('disconnect', function () {
     // close user connection
-    console.log('client disconnected. socket id=' + getId(socket) + '  , total clients=' + getClientCount());
+    console.log('client disconnected. socket id=' + getId(socket));
     cleanUpPeer(socket);
   });
   socket.on('error', function (err) {
@@ -320,11 +252,6 @@ function getId(socket) {
   return socket.id;
 }
 
-function getClientCount() {
-  // WARN: undocumented method to get clients number
-  return io.eio.clientsCount;
-}
-
 function cleanUpPeer(socket) {
   const id = getId(socket);
   const consumer = getVideoConsumer(id);
@@ -364,7 +291,6 @@ function cleanUpPeer(socket) {
 }
 
 // ========= mediasoup ===========
-const mediasoup = require("mediasoup");
 const mediasoupOptions = {
   // Worker settings
   worker: {
@@ -421,6 +347,7 @@ const mediasoupOptions = {
 
 let worker = null;
 let router = null;
+// TODO there can be one per room
 let producerTransport = null;
 let videoProducer = null;
 let audioProducer = null;
@@ -438,15 +365,6 @@ async function startWorker() {
 }
 
 startWorker();
-
-//
-// Room {
-//   id,
-//   transports[],
-//   consumers[],
-//   producers[],
-// }
-//
 
 // --- multi-consumers --
 let transports = {};
@@ -495,23 +413,6 @@ function removeAudioConsumer(id) {
   console.log('audioConsumers count=' + Object.keys(audioConsumers).length);
 }
 
-function removeAllConsumers() {
-  for (const key in videoConsumers) {
-    const consumer = videoConsumers[key];
-    console.log('key=' + key + ',  consumer:', consumer);
-    consumer.close();
-    delete videoConsumers[key];
-  }
-  console.log('removeAllConsumers videoConsumers count=' + Object.keys(videoConsumers).length);
-
-  for (const key in audioConsumers) {
-    const consumer = audioConsumers[key];
-    console.log('key=' + key + ',  consumer:', consumer);
-    consumer.close();
-    delete audioConsumers[key];
-  }
-}
-
 async function createTransport() {
   const transport = await router.createWebRtcTransport(mediasoupOptions.webRtcTransport);
   console.log('-- create transport id=' + transport.id);
@@ -548,10 +449,6 @@ async function createConsumer(transport, producer, rtpCapabilities) {
     console.error('consume failed', err);
     return;
   });
-
-  //if (consumer.type === 'simulcast') {
-  //  await consumer.setPreferredLayers({ spatialLayer: 2, temporalLayer: 2 });
-  //}
 
   return {
     consumer: consumer,

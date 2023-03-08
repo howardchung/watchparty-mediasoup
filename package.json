@@ -2,26 +2,16 @@
   "name": "mediasoup_v3_example",
   "version": "0.8.0",
   "description": "WebRTC SFU mediaosup v3 example",
-  "main": "mediasoup_v3_example.js",
+  "main": "mediasoup_v3_broadcast.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-client": "node_modules/browserify/bin/cmd.js node_modules/mediasoup-client/lib/index.js -s MediasoupClient -o public/js/mediasoup-client.js",
-    "loopback": "node mediasoup_v3_loopback.js",
     "broadcast": "node mediasoup_v3_broadcast.js",
-    "multiparty": "node mediasoup_v3_multiparty.js",
-    "multiroom": "node mediasoup_v3_multiroom.js",
-    "start": "EXTERNAL_IP=$(curl https://api.ipify.org) npm run broadcast"
+    "start": "PORT=4001 EXTERNAL_IP=$(curl https://api.ipify.org) npm run broadcast"
   },
-  "keywords": [
-    "webrtc"
-  ],
-  "author": "mganeko",
+  "author": "howardc93",
   "license": "MIT",
   "dependencies": {
-    "browserify": "^16.3.0",
-    "express": "^4.17.1",
-    "mediasoup": "^3.1.7",
-    "mediasoup-client": "^3.1.6",
-    "socket.io": "^2.2.0"
+    "mediasoup": "^3.11.13",
+    "socket.io": "^4.6.1"
   }
 }

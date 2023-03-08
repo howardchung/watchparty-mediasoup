@@ -59,6 +59,7 @@
     }
 
     return new Promise((resolve, reject) => {
+      // TODO connect to room namespace
       socket = io.connect('/');
 
       socket.on('connect', function (evt) {
