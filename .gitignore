@@ -3,5 +3,5 @@ stock/
 mediasoup_example_v3.js
 *.log
 *.txt
-
+.env
 

@@ -5,13 +5,19 @@
   "main": "mediasoup_v3_broadcast.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "broadcast": "node mediasoup_v3_broadcast.js",
-    "start": "PORT=4001 EXTERNAL_IP=$(curl https://api.ipify.org) npm run broadcast"
+    "start": "EXTERNAL_IP=$(curl https://api.ipify.org) node server.js",
+    "prettier": "prettier --single-quote --write .",
+    "build": "tsc server.ts"
   },
   "author": "howardc93",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "mediasoup": "^3.11.13",
     "socket.io": "^4.6.1"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
   }
 }
