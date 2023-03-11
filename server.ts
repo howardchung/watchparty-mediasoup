@@ -327,10 +327,6 @@ async function start() {
       }
     });
 
-    // ---- sendback welcome message with on connected ---
-    const newId = getId(socket);
-    sendback(socket, { type: 'welcome', id: newId });
-
     // --- send response to client ---
     function sendResponse(response, callback) {
       //console.log('sendResponse() callback:', callback);
@@ -340,10 +336,6 @@ async function start() {
     // --- send error to client ---
     function sendReject(error, callback) {
       callback(error.toString(), null);
-    }
-
-    function sendback(socket, message) {
-      socket.emit('message', message);
     }
 
     function getId(socket) {

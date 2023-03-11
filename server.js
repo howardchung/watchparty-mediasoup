@@ -109,8 +109,8 @@ var io = sio(server);
 console.log('socket.io server start. port=' + serverOptions.listenPort);
 var rooms = new Map();
 var worker = null;
-startWorker();
-function startWorker() {
+start();
+function start() {
     return __awaiter(this, void 0, void 0, function () {
         var namespaces;
         var _this = this;
@@ -130,9 +130,6 @@ function startWorker() {
                         // --- send error to client ---
                         function sendReject(error, callback) {
                             callback(error.toString(), null);
-                        }
-                        function sendback(socket, message) {
-                            socket.emit('message', message);
                         }
                         function getId(socket) {
                             return socket.id;
@@ -166,31 +163,25 @@ function startWorker() {
                                 room.producerSocketId = null;
                             }
                         }
-                        var _a, _b, _c, room, _d, newId;
+                        var room, _a;
                         var _this = this;
-                        var _e;
-                        return __generator(this, function (_f) {
-                            switch (_f.label) {
+                        var _b;
+                        return __generator(this, function (_c) {
+                            switch (_c.label) {
                                 case 0:
-                                    if (!!rooms.has(socket.nsp.name)) return [3 /*break*/, 2];
-                                    // Creating room for new namespace
-                                    _b = (_a = rooms).set;
-                                    _c = [socket.nsp.name];
-                                    return [4 /*yield*/, Room.build(worker)];
-                                case 1:
-                                    // Creating room for new namespace
-                                    _b.apply(_a, _c.concat([_f.sent()]));
-                                    _f.label = 2;
+                                    if (!((_b = rooms.get(socket.nsp.name)) !== null && _b !== void 0)) return [3 /*break*/, 1];
+                                    _a = _b;
+                                    return [3 /*break*/, 3];
+                                case 1: return [4 /*yield*/, Room.build(worker)];
                                 case 2:
-                                    if (!((_e = rooms.get(socket.nsp.name)) !== null && _e !== void 0)) return [3 /*break*/, 3];
-                                    _d = _e;
-                                    return [3 /*break*/, 5];
-                                case 3: return [4 /*yield*/, Room.build(worker)];
-                                case 4:
-                                    _d = _f.sent();
-                                    _f.label = 5;
-                                case 5:
-                                    room = _d;
+                                    _a = _c.sent();
+                                    _c.label = 3;
+                                case 3:
+                                    room = _a;
+                                    if (!rooms.has(socket.nsp.name)) {
+                                        // Save this room
+                                        rooms.set(socket.nsp.name, room);
+                                    }
                                     console.log('client connected. socket id=' + getId(socket), 'namespace=' + socket.nsp.name);
                                     socket.on('disconnect', function () {
                                         // close user connection
@@ -476,8 +467,6 @@ function startWorker() {
                                             }
                                         });
                                     }); });
-                                    newId = getId(socket);
-                                    sendback(socket, { type: 'welcome', id: newId });
                                     return [2 /*return*/];
                             }
                         });
