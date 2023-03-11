@@ -47,7 +47,7 @@ const key = process.env.SSL_KEY_FILE
 const cert = process.env.SSL_CERT_FILE
     ? fs.readFileSync(process.env.SSL_CERT_FILE).toString()
     : '';
-const server = key && cert
+const server = (key && cert)
     ? https
         .createServer({
         key,
@@ -108,11 +108,10 @@ const mediasoupOptions = {
 const io = new socket_io_1.Server(server);
 console.log('socket.io server start. port=' + serverOptions.listenPort);
 const rooms = new Map();
-let worker = null;
 start();
 function start() {
     return __awaiter(this, void 0, void 0, function* () {
-        worker = yield mediasoup.createWorker();
+        const worker = yield mediasoup.createWorker();
         console.log('-- mediasoup worker start. --');
         const namespaces = io.of(/^\/.*/);
         namespaces.on('connection', (socket) => __awaiter(this, void 0, void 0, function* () {
