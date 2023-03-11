@@ -38,6 +38,7 @@ const socket_io_1 = require("socket.io");
 const mediasoup = __importStar(require("mediasoup"));
 const https = __importStar(require("https"));
 const http = __importStar(require("http"));
+const child_process_1 = require("child_process");
 let serverOptions = {
     listenPort: process.env.PORT || 80,
 };
@@ -96,7 +97,7 @@ const mediasoupOptions = {
     },
     // WebRtcTransport settings
     webRtcTransport: {
-        listenIps: [{ ip: '0.0.0.0', announcedIp: process.env.EXTERNAL_IP }],
+        listenIps: [{ ip: '0.0.0.0', announcedIp: (0, child_process_1.execSync)(`curl https://api.ipify.org`).toString('utf8') }],
         enableUdp: true,
         enableTcp: true,
         preferUdp: true,
