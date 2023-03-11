@@ -1,27 +1,25 @@
 require('dotenv').config();
-const fs = require('fs');
-const sio = require('socket.io');
-const mediasoup = require('mediasoup');
-const https = require('https');
-const http = require('http');
+import * as fs from 'fs';
+import { Server } from 'socket.io';
+import * as mediasoup from 'mediasoup';
+import * as https from 'https';
+import * as http from 'http';
 
 let serverOptions = {
   listenPort: process.env.PORT || 80,
 };
+const key = process.env.SSL_KEY_FILE
+  ? fs.readFileSync(process.env.SSL_KEY_FILE).toString()
+  : '';
+const cert = process.env.SSL_CERT_FILE
+  ? fs.readFileSync(process.env.SSL_CERT_FILE).toString()
+  : '';
 const server =
-  process.env.NODE_ENV === 'development'
+  (key && cert)
     ? https
         .createServer({
-          key: fs
-            .readFileSync(
-              '/etc/letsencrypt/live/azure.howardchung.net/privkey.pem'
-            )
-            .toString(),
-          cert: fs
-            .readFileSync(
-              '/etc/letsencrypt/live/azure.howardchung.net/fullchain.pem'
-            )
-            .toString(),
+          key,
+          cert,
         })
         .listen(serverOptions.listenPort)
     : http.createServer().listen(serverOptions.listenPort);
@@ -77,20 +75,19 @@ const mediasoupOptions = {
 };
 
 // --- socket.io server ---
-const io = sio(server);
+const io = new Server(server);
 console.log('socket.io server start. port=' + serverOptions.listenPort);
 
 const rooms = new Map<string, Room>();
-let worker = null;
 start();
 
 async function start() {
-  worker = await mediasoup.createWorker();
+  const worker = await mediasoup.createWorker();
   console.log('-- mediasoup worker start. --');
 
   const namespaces = io.of(/^\/.*/);
   namespaces.on('connection', async (socket) => {
-    const room = rooms.get(socket.nsp.name) ?? await Room.build(worker);
+    const room = rooms.get(socket.nsp.name) ?? (await Room.build(worker));
     if (!rooms.has(socket.nsp.name)) {
       // Save this room
       rooms.set(socket.nsp.name, room);
@@ -157,19 +154,19 @@ async function start() {
           kind,
           rtpParameters,
         });
-        room.videoProducer.observer.on('close', () => {
+        room.videoProducer?.observer.on('close', () => {
           console.log('videoProducer closed ---');
         });
-        sendResponse({ id: room.videoProducer.id }, callback);
+        sendResponse({ id: room.videoProducer?.id }, callback);
       } else if (kind === 'audio') {
-        room.audioProducer = await room.producerTransport.produce({
+        room.audioProducer = await room.producerTransport?.produce({
           kind,
           rtpParameters,
         });
-        room.audioProducer.observer.on('close', () => {
+        room.audioProducer?.observer.on('close', () => {
           console.log('audioProducer closed ---');
         });
-        sendResponse({ id: room.audioProducer.id }, callback);
+        sendResponse({ id: room.audioProducer?.id }, callback);
       } else {
         console.error('produce ERROR. BAD kind:', kind);
         //sendResponse({}, callback);
@@ -380,11 +377,11 @@ async function start() {
 
 class Room {
   // ========= mediasoup state needs to be created per room ===========
-  public router: any = null;
-  public producerTransport: any = null;
-  public videoProducer: any = null;
-  public audioProducer: any = null;
-  public producerSocketId: any = null;
+  public router: mediasoup.types.Router = null as any;
+  public producerTransport: mediasoup.types.Transport | null | undefined = null;
+  public videoProducer: mediasoup.types.Producer | null | undefined = null;
+  public audioProducer: mediasoup.types.Producer | null | undefined = null;
+  public producerSocketId: string | null | undefined = null;
 
   // --- multi-consumers --
   public transports = {};
@@ -472,8 +469,12 @@ class Room {
     };
   };
 
-  createConsumer = async (transport, producer, rtpCapabilities) => {
-    let consumer: any = null;
+  createConsumer = async (
+    transport: mediasoup.types.Transport,
+    producer: mediasoup.types.Producer,
+    rtpCapabilities
+  ) => {
+    let consumer: mediasoup.types.Consumer | null = null;
     if (
       !this.router.canConsume({
         producerId: producer.id,
@@ -484,28 +485,26 @@ class Room {
       return null;
     }
 
-    //consumer = await producerTransport.consume({ // NG: try use same trasport as producer (for loopback)
-    consumer = await transport
-      .consume({
+    try {
+      consumer = await transport.consume({
         // OK
         producerId: producer.id,
         rtpCapabilities,
         paused: producer.kind === 'video',
-      })
-      .catch((err) => {
-        console.error('consume failed', err);
-        return;
       });
+    } catch (e) {
+      console.warn(e);
+    }
 
     return {
       consumer: consumer,
       params: {
         producerId: producer.id,
-        id: consumer.id,
-        kind: consumer.kind,
-        rtpParameters: consumer.rtpParameters,
-        type: consumer.type,
-        producerPaused: consumer.producerPaused,
+        id: consumer?.id,
+        kind: consumer?.kind,
+        rtpParameters: consumer?.rtpParameters,
+        type: consumer?.type,
+        producerPaused: consumer?.producerPaused,
       },
     };
   };
