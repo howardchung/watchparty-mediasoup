@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "EXTERNAL_IP=$(curl https://api.ipify.org) node server.js",
     "prettier": "prettier --single-quote --write .",
-    "build": "tsc"
+    "build": "tsc",
+    "pm2": "PORT=80 pm2 start server.js --output /dev/null --name mediasoup"
   },
   "author": "howardc93",
   "license": "MIT",
