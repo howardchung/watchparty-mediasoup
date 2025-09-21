@@ -41,7 +41,7 @@
             r,
             e,
             n,
-            t
+            t,
           );
         }
         return n[i].exports;
@@ -157,10 +157,10 @@
             'object' == typeof exports && 'object' == typeof module
               ? (module.exports = t())
               : 'function' == typeof define && define.amd
-              ? define([], t)
-              : 'object' == typeof exports
-              ? (exports.bowser = t())
-              : (e.bowser = t());
+                ? define([], t)
+                : 'object' == typeof exports
+                  ? (exports.bowser = t())
+                  : (e.bowser = t());
           })(this, function () {
             return (function (e) {
               var t = {};
@@ -168,7 +168,9 @@
                 if (t[n]) return t[n].exports;
                 var i = (t[n] = { i: n, l: !1, exports: {} });
                 return (
-                  e[n].call(i.exports, i, i.exports, r), (i.l = !0), i.exports
+                  e[n].call(i.exports, i, i.exports, r),
+                  (i.l = !0),
+                  i.exports
                 );
               }
               return (
@@ -179,12 +181,12 @@
                     Object.defineProperty(e, t, { enumerable: !0, get: n });
                 }),
                 (r.r = function (e) {
-                  'undefined' != typeof Symbol &&
+                  ('undefined' != typeof Symbol &&
                     Symbol.toStringTag &&
                     Object.defineProperty(e, Symbol.toStringTag, {
                       value: 'Module',
                     }),
-                    Object.defineProperty(e, '__esModule', { value: !0 });
+                    Object.defineProperty(e, '__esModule', { value: !0 }));
                 }),
                 (r.t = function (e, t) {
                   if ((1 & t && (e = r(e)), 8 & t)) return e;
@@ -205,7 +207,7 @@
                         i,
                         function (t) {
                           return e[t];
-                        }.bind(null, i)
+                        }.bind(null, i),
                       );
                   return n;
                 }),
@@ -218,7 +220,7 @@
                       : function () {
                           return e;
                         };
-                  return r.d(t, 'a', t), t;
+                  return (r.d(t, 'a', t), t);
                 }),
                 (r.o = function (e, t) {
                   return Object.prototype.hasOwnProperty.call(e, t);
@@ -229,7 +231,7 @@
             })({
               17: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(89)]),
+                ((i = [t, r(89)]),
                   void 0 ===
                     (s =
                       'function' ==
@@ -238,20 +240,20 @@
                         function i(e, t) {
                           for (var r = 0; r < t.length; r++) {
                             var n = t[r];
-                            (n.enumerable = n.enumerable || !1),
+                            ((n.enumerable = n.enumerable || !1),
                               (n.configurable = !0),
                               'value' in n && (n.writable = !0),
-                              Object.defineProperty(e, n.key, n);
+                              Object.defineProperty(e, n.key, n));
                           }
                         }
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
-                          (r.default = void 0);
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
+                          (r.default = void 0));
                         var s = (function () {
                           function e() {
                             !(function (e, t) {
                               if (!(e instanceof t))
                                 throw new TypeError(
-                                  'Cannot call a class as a function'
+                                  'Cannot call a class as a function',
                                 );
                             })(this, e);
                           }
@@ -320,30 +322,30 @@
                                     return 1 === t[0] && t[1] < 6
                                       ? 'Cupcake'
                                       : 1 === t[0] && t[1] >= 6
-                                      ? 'Donut'
-                                      : 2 === t[0] && t[1] < 2
-                                      ? 'Eclair'
-                                      : 2 === t[0] && 2 === t[1]
-                                      ? 'Froyo'
-                                      : 2 === t[0] && t[1] > 2
-                                      ? 'Gingerbread'
-                                      : 3 === t[0]
-                                      ? 'Honeycomb'
-                                      : 4 === t[0] && t[1] < 1
-                                      ? 'Ice Cream Sandwich'
-                                      : 4 === t[0] && t[1] < 4
-                                      ? 'Jelly Bean'
-                                      : 4 === t[0] && t[1] >= 4
-                                      ? 'KitKat'
-                                      : 5 === t[0]
-                                      ? 'Lollipop'
-                                      : 6 === t[0]
-                                      ? 'Marshmallow'
-                                      : 7 === t[0]
-                                      ? 'Nougat'
-                                      : 8 === t[0]
-                                      ? 'Oreo'
-                                      : void 0;
+                                        ? 'Donut'
+                                        : 2 === t[0] && t[1] < 2
+                                          ? 'Eclair'
+                                          : 2 === t[0] && 2 === t[1]
+                                            ? 'Froyo'
+                                            : 2 === t[0] && t[1] > 2
+                                              ? 'Gingerbread'
+                                              : 3 === t[0]
+                                                ? 'Honeycomb'
+                                                : 4 === t[0] && t[1] < 1
+                                                  ? 'Ice Cream Sandwich'
+                                                  : 4 === t[0] && t[1] < 4
+                                                    ? 'Jelly Bean'
+                                                    : 4 === t[0] && t[1] >= 4
+                                                      ? 'KitKat'
+                                                      : 5 === t[0]
+                                                        ? 'Lollipop'
+                                                        : 6 === t[0]
+                                                          ? 'Marshmallow'
+                                                          : 7 === t[0]
+                                                            ? 'Nougat'
+                                                            : 8 === t[0]
+                                                              ? 'Oreo'
+                                                              : void 0;
                                 },
                               },
                               {
@@ -413,14 +415,14 @@
                           );
                           var t, r, s;
                         })();
-                        (r.default = s), (e.exports = t.default);
+                        ((r.default = s), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               86: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(87)]),
+                ((i = [t, r(87)]),
                   void 0 ===
                     (s =
                       'function' ==
@@ -429,22 +431,22 @@
                         function i(e, t) {
                           for (var r = 0; r < t.length; r++) {
                             var n = t[r];
-                            (n.enumerable = n.enumerable || !1),
+                            ((n.enumerable = n.enumerable || !1),
                               (n.configurable = !0),
                               'value' in n && (n.writable = !0),
-                              Object.defineProperty(e, n.key, n);
+                              Object.defineProperty(e, n.key, n));
                           }
                         }
                         var s;
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
                           (r.default = void 0),
-                          (n = (s = n) && s.__esModule ? s : { default: s });
+                          (n = (s = n) && s.__esModule ? s : { default: s }));
                         var a = (function () {
                           function e() {
                             !(function (e, t) {
                               if (!(e instanceof t))
                                 throw new TypeError(
-                                  'Cannot call a class as a function'
+                                  'Cannot call a class as a function',
                                 );
                             })(this, e);
                           }
@@ -460,7 +462,7 @@
                                     arguments[1];
                                   if ('string' != typeof e)
                                     throw new Error(
-                                      'UserAgent should be a string'
+                                      'UserAgent should be a string',
                                     );
                                   return new n.default(e, t);
                                 },
@@ -478,14 +480,14 @@
                           );
                           var t, r, s;
                         })();
-                        (r.default = a), (e.exports = t.default);
+                        ((r.default = a), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               87: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(88), r(90), r(91), r(92), r(17)]),
+                ((i = [t, r(88), r(90), r(91), r(92), r(17)]),
                   void 0 ===
                     (s =
                       'function' ==
@@ -513,19 +515,19 @@
                         function c(e, t) {
                           for (var r = 0; r < t.length; r++) {
                             var n = t[r];
-                            (n.enumerable = n.enumerable || !1),
+                            ((n.enumerable = n.enumerable || !1),
                               (n.configurable = !0),
                               'value' in n && (n.writable = !0),
-                              Object.defineProperty(e, n.key, n);
+                              Object.defineProperty(e, n.key, n));
                           }
                         }
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
                           (r.default = void 0),
                           (n = u(n)),
                           (i = u(i)),
                           (s = u(s)),
                           (a = u(a)),
-                          (o = u(o));
+                          (o = u(o)));
                         var f = (function () {
                           function e(t) {
                             var r =
@@ -536,17 +538,17 @@
                               ((function (e, t) {
                                 if (!(e instanceof t))
                                   throw new TypeError(
-                                    'Cannot call a class as a function'
+                                    'Cannot call a class as a function',
                                   );
                               })(this, e),
                               null == t || '' === t)
                             )
                               throw new Error(
-                                "UserAgent parameter can't be empty"
+                                "UserAgent parameter can't be empty",
                               );
-                            (this._ua = t),
+                            ((this._ua = t),
                               (this.parsedResult = {}),
-                              !0 !== r && this.parse();
+                              !0 !== r && this.parse());
                           }
                           return (
                             (t = e),
@@ -576,13 +578,13 @@
                                         return e.test(t);
                                       });
                                     throw new Error(
-                                      "Browser's test function is not valid"
+                                      "Browser's test function is not valid",
                                     );
                                   });
                                   return (
                                     t &&
                                       (this.parsedResult.browser = t.describe(
-                                        this.getUA()
+                                        this.getUA(),
                                       )),
                                     this.parsedResult.browser
                                   );
@@ -601,7 +603,7 @@
                                 value: function (e) {
                                   return e
                                     ? String(
-                                        this.getBrowser().name
+                                        this.getBrowser().name,
                                       ).toLowerCase() || ''
                                     : this.getBrowser().name || '';
                                 },
@@ -633,13 +635,13 @@
                                         return e.test(t);
                                       });
                                     throw new Error(
-                                      "Browser's test function is not valid"
+                                      "Browser's test function is not valid",
                                     );
                                   });
                                   return (
                                     t &&
                                       (this.parsedResult.os = t.describe(
-                                        this.getUA()
+                                        this.getUA(),
                                       )),
                                     this.parsedResult.os
                                   );
@@ -696,13 +698,13 @@
                                         return e.test(t);
                                       });
                                     throw new Error(
-                                      "Browser's test function is not valid"
+                                      "Browser's test function is not valid",
                                     );
                                   });
                                   return (
                                     t &&
                                       (this.parsedResult.platform = t.describe(
-                                        this.getUA()
+                                        this.getUA(),
                                       )),
                                     this.parsedResult.platform
                                   );
@@ -721,7 +723,7 @@
                                 value: function (e) {
                                   return e
                                     ? String(
-                                        this.getEngine().name
+                                        this.getEngine().name,
                                       ).toLowerCase() || ''
                                     : this.getEngine().name || '';
                                 },
@@ -739,13 +741,13 @@
                                         return e.test(t);
                                       });
                                     throw new Error(
-                                      "Browser's test function is not valid"
+                                      "Browser's test function is not valid",
                                     );
                                   });
                                   return (
                                     t &&
                                       (this.parsedResult.engine = t.describe(
-                                        this.getUA()
+                                        this.getUA(),
                                       )),
                                     this.parsedResult.engine
                                   );
@@ -848,11 +850,11 @@
                                             : (t = []),
                                           '>' === e[0] ? t.push(1) : t.push(-1))
                                         : '=' === e[0]
-                                        ? (r = e.substr(1))
-                                        : '~' === e[0] &&
-                                          ((n = !0), (r = e.substr(1))),
+                                          ? (r = e.substr(1))
+                                          : '~' === e[0] &&
+                                            ((n = !0), (r = e.substr(1))),
                                       t.indexOf(
-                                        o.default.compareVersions(i, r, n)
+                                        o.default.compareVersions(i, r, n),
                                       ) > -1
                                     );
                                 },
@@ -914,23 +916,23 @@
                           );
                           var t, r, u;
                         })();
-                        (r.default = f), (e.exports = t.default);
+                        ((r.default = f), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               88: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(17)]),
+                ((i = [t, r(17)]),
                   void 0 ===
                     (s =
                       'function' ==
                       typeof (n = function (r, n) {
                         'use strict';
                         var i;
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
                           (r.default = void 0),
-                          (n = (i = n) && i.__esModule ? i : { default: i });
+                          (n = (i = n) && i.__esModule ? i : { default: i }));
                         var s = /version\/(\d+(\.?_?\d+)+)/i,
                           a = [
                             {
@@ -940,9 +942,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /googlebot\/(\d+(\.\d+))/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -953,9 +955,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:opera)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -965,9 +967,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:opr|opios)[\s\/](\S+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -980,9 +982,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:SamsungBrowser)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -993,9 +995,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:whale)[\s\/](\d+(?:\.\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1005,9 +1007,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:MZBrowser)[\s\/](\d+(?:\.\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1017,9 +1019,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:focus)[\s\/](\d+(?:\.\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1029,9 +1031,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:swing)[\s\/](\d+(?:\.\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1042,9 +1044,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:coast)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1054,9 +1056,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:yabrowser)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1067,9 +1069,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:ucbrowser)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1080,9 +1082,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:Maxthon|mxios)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1093,9 +1095,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:epiphany)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1106,9 +1108,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:puffin)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1119,9 +1121,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:sleipnir)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1132,9 +1134,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /(?:k-meleon)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1144,9 +1146,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:micromessenger)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1155,9 +1157,9 @@
                                 var t = { name: 'Internet Explorer' },
                                   r = n.default.getFirstMatch(
                                     /(?:msie |rv:)(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1166,9 +1168,9 @@
                                 var t = { name: 'Microsoft Edge' },
                                   r = n.default.getFirstMatch(
                                     /\sedg\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1177,9 +1179,9 @@
                                 var t = { name: 'Microsoft Edge' },
                                   r = n.default.getSecondMatch(
                                     /edg([ea]|ios)\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1188,9 +1190,9 @@
                                 var t = { name: 'Vivaldi' },
                                   r = n.default.getFirstMatch(
                                     /vivaldi\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1199,9 +1201,9 @@
                                 var t = { name: 'SeaMonkey' },
                                   r = n.default.getFirstMatch(
                                     /seamonkey\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1210,9 +1212,9 @@
                                 var t = { name: 'Sailfish' },
                                   r = n.default.getFirstMatch(
                                     /sailfish\s?browser\/(\d+(\.\d+)?)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1221,9 +1223,9 @@
                                 var t = { name: 'Amazon Silk' },
                                   r = n.default.getFirstMatch(
                                     /silk\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1232,9 +1234,9 @@
                                 var t = { name: 'PhantomJS' },
                                   r = n.default.getFirstMatch(
                                     /phantomjs\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1243,9 +1245,9 @@
                                 var t = { name: 'SlimerJS' },
                                   r = n.default.getFirstMatch(
                                     /slimerjs\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1256,9 +1258,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /blackberry[\d]+\/(\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1269,9 +1271,9 @@
                                     n.default.getFirstMatch(s, e) ||
                                     n.default.getFirstMatch(
                                       /w(?:eb)?[o0]sbrowser\/(\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1280,9 +1282,9 @@
                                 var t = { name: 'Bada' },
                                   r = n.default.getFirstMatch(
                                     /dolfin\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1292,9 +1294,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:tizen\s?)?browser\/(\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1304,9 +1306,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:qupzilla)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1315,9 +1317,9 @@
                                 var t = { name: 'Firefox' },
                                   r = n.default.getFirstMatch(
                                     /(?:firefox|iceweasel|fxios)[\s\/](\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1327,9 +1329,9 @@
                                   r =
                                     n.default.getFirstMatch(
                                       /(?:chromium)[\s\/](\d+(\.?_?\d+)+)/i,
-                                      e
+                                      e,
                                     ) || n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1338,9 +1340,9 @@
                                 var t = { name: 'Chrome' },
                                   r = n.default.getFirstMatch(
                                     /(?:chrome|crios|crmo)\/(\d+(\.?_?\d+)+)/i,
-                                    e
+                                    e,
                                   );
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1352,7 +1354,7 @@
                               describe: function (e) {
                                 var t = { name: 'Android Browser' },
                                   r = n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1360,7 +1362,7 @@
                               describe: function (e) {
                                 var t = { name: 'PlayStation 4' },
                                   r = n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1368,7 +1370,7 @@
                               describe: function (e) {
                                 var t = { name: 'Safari' },
                                   r = n.default.getFirstMatch(s, e);
-                                return r && (t.version = r), t;
+                                return (r && (t.version = r), t);
                               },
                             },
                             {
@@ -1385,20 +1387,20 @@
                               },
                             },
                           ];
-                        (r.default = a), (e.exports = t.default);
+                        ((r.default = a), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               89: function (e, t, r) {
                 var n, i, s;
-                (i = [t]),
+                ((i = [t]),
                   void 0 ===
                     (s =
                       'function' ==
                       typeof (n = function (e) {
                         'use strict';
-                        Object.defineProperty(e, '__esModule', { value: !0 }),
+                        (Object.defineProperty(e, '__esModule', { value: !0 }),
                           (e.BROWSER_ALIASES_MAP = void 0),
                           (e.BROWSER_ALIASES_MAP = {
                             'Amazon Silk': 'amazon_silk',
@@ -1435,30 +1437,30 @@
                             'WebOS Browser': 'webos',
                             WeChat: 'wechat',
                             'Yandex Browser': 'yandex',
-                          });
+                          }));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               90: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(17)]),
+                ((i = [t, r(17)]),
                   void 0 ===
                     (s =
                       'function' ==
                       typeof (n = function (r, n) {
                         'use strict';
                         var i;
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
                           (r.default = void 0),
-                          (n = (i = n) && i.__esModule ? i : { default: i });
+                          (n = (i = n) && i.__esModule ? i : { default: i }));
                         var s = [
                           {
                             test: [/windows phone/i],
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                 /windows phone (?:os)?\s?(\d+(\.\d+)*)/i,
-                                e
+                                e,
                               );
                               return { name: 'Windows Phone', version: t };
                             },
@@ -1468,7 +1470,7 @@
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                   /Windows ((NT|XP)( \d\d?.\d)?)/i,
-                                  e
+                                  e,
                                 ),
                                 r = n.default.getWindowsVersionName(t);
                               return {
@@ -1493,7 +1495,7 @@
                               var t = n.default
                                 .getFirstMatch(
                                   /os (\d+([_\s]\d+)*) like mac os x/i,
-                                  e
+                                  e,
                                 )
                                 .replace(/[_\s]/g, '.');
                               return { name: 'iOS', version: t };
@@ -1508,11 +1510,11 @@
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                   /android[\s\/-](\d+(\.\d+)*)/i,
-                                  e
+                                  e,
                                 ),
                                 r = n.default.getAndroidVersionName(t),
                                 i = { name: 'Android', version: t };
-                              return r && (i.versionName = r), i;
+                              return (r && (i.versionName = r), i);
                             },
                           },
                           {
@@ -1520,10 +1522,10 @@
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                   /(?:web|hpw)[o0]s\/(\d+(\.\d+)*)/i,
-                                  e
+                                  e,
                                 ),
                                 r = { name: 'WebOS' };
-                              return t && t.length && (r.version = t), r;
+                              return (t && t.length && (r.version = t), r);
                             },
                           },
                           {
@@ -1532,11 +1534,11 @@
                               var t =
                                 n.default.getFirstMatch(
                                   /rim\stablet\sos\s(\d+(\.\d+)*)/i,
-                                  e
+                                  e,
                                 ) ||
                                 n.default.getFirstMatch(
                                   /blackberry\d+\/(\d+([_\s]\d+)*)/i,
-                                  e
+                                  e,
                                 ) ||
                                 n.default.getFirstMatch(/\bbb(\d+)/i, e);
                               return { name: 'BlackBerry', version: t };
@@ -1547,7 +1549,7 @@
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                 /bada\/(\d+(\.\d+)*)/i,
-                                e
+                                e,
                               );
                               return { name: 'Bada', version: t };
                             },
@@ -1557,7 +1559,7 @@
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                 /tizen[\/\s](\d+(\.\d+)*)/i,
-                                e
+                                e,
                               );
                               return { name: 'Tizen', version: t };
                             },
@@ -1579,29 +1581,29 @@
                             describe: function (e) {
                               var t = n.default.getFirstMatch(
                                 /PlayStation 4[\/\s](\d+(\.\d+)*)/i,
-                                e
+                                e,
                               );
                               return { name: 'PlayStation 4', version: t };
                             },
                           },
                         ];
-                        (r.default = s), (e.exports = t.default);
+                        ((r.default = s), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               91: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(17)]),
+                ((i = [t, r(17)]),
                   void 0 ===
                     (s =
                       'function' ==
                       typeof (n = function (r, n) {
                         'use strict';
                         var i;
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
                           (r.default = void 0),
-                          (n = (i = n) && i.__esModule ? i : { default: i });
+                          (n = (i = n) && i.__esModule ? i : { default: i }));
                         var s = {
                             tablet: 'tablet',
                             mobile: 'mobile',
@@ -1622,7 +1624,7 @@
                                     n.default.getFirstMatch(/(can-l01)/i, e) &&
                                     'Nova',
                                   r = { type: s.mobile, vendor: 'Huawei' };
-                                return t && (r.model = t), r;
+                                return (t && (r.model = t), r);
                               },
                             },
                             {
@@ -1672,7 +1674,7 @@
                               describe: function (e) {
                                 var t = n.default.getFirstMatch(
                                   /(ipod|iphone)/i,
-                                  e
+                                  e,
                                 );
                                 return {
                                   type: s.mobile,
@@ -1720,7 +1722,7 @@
                             {
                               test: function (e) {
                                 var t = Number(
-                                  String(e.getOSVersion()).split('.')[0]
+                                  String(e.getOSVersion()).split('.')[0],
                                 );
                                 return 'android' === e.getOSName(!0) && t >= 3;
                               },
@@ -1769,23 +1771,23 @@
                               },
                             },
                           ];
-                        (r.default = a), (e.exports = t.default);
+                        ((r.default = a), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
               92: function (e, t, r) {
                 var n, i, s;
-                (i = [t, r(17)]),
+                ((i = [t, r(17)]),
                   void 0 ===
                     (s =
                       'function' ==
                       typeof (n = function (r, n) {
                         'use strict';
                         var i;
-                        Object.defineProperty(r, '__esModule', { value: !0 }),
+                        (Object.defineProperty(r, '__esModule', { value: !0 }),
                           (r.default = void 0),
-                          (n = (i = n) && i.__esModule ? i : { default: i });
+                          (n = (i = n) && i.__esModule ? i : { default: i }));
                         var s = [
                           {
                             test: function (e) {
@@ -1796,7 +1798,7 @@
                               if (t) return { name: 'Blink' };
                               var r = n.default.getFirstMatch(
                                 /edge\/(\d+(\.?_?\d+)+)/i,
-                                e
+                                e,
                               );
                               return { name: 'EdgeHTML', version: r };
                             },
@@ -1807,9 +1809,9 @@
                               var t = { name: 'Trident' },
                                 r = n.default.getFirstMatch(
                                   /trident\/(\d+(\.?_?\d+)+)/i,
-                                  e
+                                  e,
                                 );
-                              return r && (t.version = r), t;
+                              return (r && (t.version = r), t);
                             },
                           },
                           {
@@ -1820,9 +1822,9 @@
                               var t = { name: 'Presto' },
                                 r = n.default.getFirstMatch(
                                   /presto\/(\d+(\.?_?\d+)+)/i,
-                                  e
+                                  e,
                                 );
-                              return r && (t.version = r), t;
+                              return (r && (t.version = r), t);
                             },
                           },
                           {
@@ -1835,9 +1837,9 @@
                               var t = { name: 'Gecko' },
                                 r = n.default.getFirstMatch(
                                   /gecko\/(\d+(\.?_?\d+)+)/i,
-                                  e
+                                  e,
                                 );
-                              return r && (t.version = r), t;
+                              return (r && (t.version = r), t);
                             },
                           },
                           {
@@ -1852,16 +1854,16 @@
                               var t = { name: 'WebKit' },
                                 r = n.default.getFirstMatch(
                                   /webkit\/(\d+(\.?_?\d+)+)/i,
-                                  e
+                                  e,
                                 );
-                              return r && (t.version = r), t;
+                              return (r && (t.version = r), t);
                             },
                           },
                         ];
-                        (r.default = s), (e.exports = t.default);
+                        ((r.default = s), (e.exports = t.default));
                       })
                         ? n.apply(t, i)
-                        : n) || (e.exports = s);
+                        : n) || (e.exports = s));
               },
             });
           });
@@ -1938,7 +1940,7 @@
                 // greater and not a NaN).
                 if (typeof arg !== 'number' || arg < 0 || arg !== arg)
                   throw new TypeError(
-                    '"defaultMaxListeners" must be a positive number'
+                    '"defaultMaxListeners" must be a positive number',
                   );
                 defaultMaxListeners = arg;
               },
@@ -2060,7 +2062,7 @@
                   this,
                   arguments[1],
                   arguments[2],
-                  arguments[3]
+                  arguments[3],
                 );
                 break;
               // slower
@@ -2092,7 +2094,7 @@
                 target.emit(
                   'newListener',
                   type,
-                  listener.listener ? listener.listener : listener
+                  listener.listener ? listener.listener : listener,
                 );
 
                 // Re-assign `events` because a newListener handler could have caused the
@@ -2133,7 +2135,7 @@
                       String(type) +
                       '" listeners ' +
                       'added. Use emitter.setMaxListeners() to ' +
-                      'increase limit.'
+                      'increase limit.',
                   );
                   w.name = 'MaxListenersExceededWarning';
                   w.emitter = target;
@@ -2151,7 +2153,7 @@
 
           EventEmitter.prototype.addListener = function addListener(
             type,
-            listener
+            listener,
           ) {
             return _addListener(this, type, listener, false);
           };
@@ -2160,7 +2162,7 @@
 
           EventEmitter.prototype.prependListener = function prependListener(
             type,
-            listener
+            listener,
           ) {
             return _addListener(this, type, listener, true);
           };
@@ -2178,14 +2180,14 @@
                   return this.listener.call(
                     this.target,
                     arguments[0],
-                    arguments[1]
+                    arguments[1],
                   );
                 case 3:
                   return this.listener.call(
                     this.target,
                     arguments[0],
                     arguments[1],
-                    arguments[2]
+                    arguments[2],
                   );
                 default:
                   var args = new Array(arguments.length);
@@ -2227,7 +2229,7 @@
           // Emits a 'removeListener' event if and only if the listener was removed.
           EventEmitter.prototype.removeListener = function removeListener(
             type,
-            listener
+            listener,
           ) {
             var list, events, position, i, originalListener;
 
@@ -2460,7 +2462,7 @@
             }
             throw new Error(
               'val is not a non-empty string or a valid number. val=' +
-                JSON.stringify(val)
+                JSON.stringify(val),
             );
           };
 
@@ -2479,7 +2481,7 @@
             }
             var match =
               /^(-?(?:\d+)?\.?\d+) *(milliseconds?|msecs?|ms|seconds?|secs?|s|minutes?|mins?|m|hours?|hrs?|h|days?|d|weeks?|w|years?|yrs?|y)?$/i.exec(
-                str
+                str,
               );
             if (!match) {
               return;
@@ -3038,7 +3040,7 @@
               const newDebug = createDebug(
                 this.namespace +
                   (typeof delimiter === 'undefined' ? ':' : delimiter) +
-                  namespace
+                  namespace,
               );
               newDebug.log = this.log;
               return newDebug;
@@ -3073,7 +3075,7 @@
 
                 if (namespaces[0] === '-') {
                   createDebug.skips.push(
-                    new RegExp('^' + namespaces.substr(1) + '$')
+                    new RegExp('^' + namespaces.substr(1) + '$'),
                   );
                 } else {
                   createDebug.names.push(new RegExp('^' + namespaces + '$'));
@@ -3249,7 +3251,7 @@
           // http://crbug/webrtc/6337.
           const DefaultProfileLevelId = new ProfileLevelId(
             ProfileConstrainedBaseline,
-            Level3_1
+            Level3_1,
           );
 
           // For level_idc=11 and profile_idc=0x42, 0x4D, or 0x58, the constraint set3
@@ -3283,34 +3285,34 @@
             new ProfilePattern(
               0x42,
               new BitPattern('x1xx0000'),
-              ProfileConstrainedBaseline
+              ProfileConstrainedBaseline,
             ),
             new ProfilePattern(
               0x4d,
               new BitPattern('1xxx0000'),
-              ProfileConstrainedBaseline
+              ProfileConstrainedBaseline,
             ),
             new ProfilePattern(
               0x58,
               new BitPattern('11xx0000'),
-              ProfileConstrainedBaseline
+              ProfileConstrainedBaseline,
             ),
             new ProfilePattern(
               0x42,
               new BitPattern('x0xx0000'),
-              ProfileBaseline
+              ProfileBaseline,
             ),
             new ProfilePattern(
               0x58,
               new BitPattern('10xx0000'),
-              ProfileBaseline
+              ProfileBaseline,
             ),
             new ProfilePattern(0x4d, new BitPattern('0x0x0000'), ProfileMain),
             new ProfilePattern(0x64, new BitPattern('00000000'), ProfileHigh),
             new ProfilePattern(
               0x64,
               new BitPattern('00001100'),
-              ProfileConstrainedHigh
+              ProfileConstrainedHigh,
             ),
           ];
 
@@ -3369,7 +3371,7 @@
               default: {
                 debug(
                   'parseProfileLevelId() | unrecognized level_idc:%s',
-                  level_idc
+                  level_idc,
                 );
 
                 return null;
@@ -3387,7 +3389,7 @@
             }
 
             debug(
-              'parseProfileLevelId() | unrecognized profile_idc/profile_iop combination'
+              'parseProfileLevelId() | unrecognized profile_idc/profile_iop combination',
             );
 
             return null;
@@ -3418,7 +3420,7 @@
                 default: {
                   debug(
                     'profileLevelIdToString() | Level 1_b not is allowed for profile:%s',
-                    profile_level_id.profile
+                    profile_level_id.profile,
                   );
 
                   return null;
@@ -3452,7 +3454,7 @@
               default: {
                 debug(
                   'profileLevelIdToString() | unrecognized profile:%s',
-                  profile_level_id.profile
+                  profile_level_id.profile,
                 );
 
                 return null;
@@ -3501,7 +3503,7 @@
             return Boolean(
               profile_level_id_1 &&
                 profile_level_id_2 &&
-                profile_level_id_1.profile === profile_level_id_2.profile
+                profile_level_id_1.profile === profile_level_id_2.profile,
             );
           };
 
@@ -3533,7 +3535,7 @@
            */
           exports.generateProfileLevelIdForAnswer = function (
             local_supported_params = {},
-            remote_offered_params = {}
+            remote_offered_params = {},
           ) {
             // If both local and remote params do not contain profile-level-id, they are
             // both using the default profile. In this case, don't return anything.
@@ -3542,7 +3544,7 @@
               !remote_offered_params['profile-level-id']
             ) {
               debug(
-                'generateProfileLevelIdForAnswer() | no profile-level-id in local and remote params'
+                'generateProfileLevelIdForAnswer() | no profile-level-id in local and remote params',
               );
 
               return null;
@@ -3550,10 +3552,10 @@
 
             // Parse profile-level-ids.
             const local_profile_level_id = exports.parseSdpProfileLevelId(
-              local_supported_params
+              local_supported_params,
             );
             const remote_profile_level_id = exports.parseSdpProfileLevelId(
-              remote_offered_params
+              remote_offered_params,
             );
 
             // The local and remote codec must have valid and equal H264 Profiles.
@@ -3587,12 +3589,12 @@
             debug(
               'generateProfileLevelIdForAnswer() | result: [profile:%s, level:%s]',
               local_profile_level_id.profile,
-              answer_level
+              answer_level,
             );
 
             // Return the resulting profile-level-id for the answer parameters.
             return exports.profileLevelIdToString(
-              new ProfileLevelId(local_profile_level_id.profile, answer_level)
+              new ProfileLevelId(local_profile_level_id.profile, answer_level),
             );
           };
 
@@ -3785,7 +3787,7 @@
              * Invalid setter.
              */
             set appData(
-              appData // eslint-disable-line no-unused-vars
+              appData, // eslint-disable-line no-unused-vars
             ) {
               throw new Error('cannot override appData object');
             }
@@ -4033,7 +4035,7 @@
             async load({ routerRtpCapabilities } = {}) {
               logger.debug(
                 'load() [routerRtpCapabilities:%o]',
-                routerRtpCapabilities
+                routerRtpCapabilities,
               );
 
               if (this._loaded) throw new InvalidStateError('already loaded');
@@ -4045,38 +4047,38 @@
 
               logger.debug(
                 'load() | got native RTP capabilities:%o',
-                nativeRtpCapabilities
+                nativeRtpCapabilities,
               );
 
               // Get extended RTP capabilities.
               this._extendedRtpCapabilities = ortc.getExtendedRtpCapabilities(
                 nativeRtpCapabilities,
-                routerRtpCapabilities
+                routerRtpCapabilities,
               );
 
               logger.debug(
                 'load() | got extended RTP capabilities:%o',
-                this._extendedRtpCapabilities
+                this._extendedRtpCapabilities,
               );
 
               // Check whether we can produce audio/video.
               this._canProduceByKind.audio = ortc.canSend(
                 'audio',
-                this._extendedRtpCapabilities
+                this._extendedRtpCapabilities,
               );
               this._canProduceByKind.video = ortc.canSend(
                 'video',
-                this._extendedRtpCapabilities
+                this._extendedRtpCapabilities,
               );
 
               // Generate our receiving RTP capabilities for receiving media.
               this._recvRtpCapabilities = ortc.getRecvRtpCapabilities(
-                this._extendedRtpCapabilities
+                this._extendedRtpCapabilities,
               );
 
               logger.debug(
                 'load() | got receiving RTP capabilities:%o',
-                this._recvRtpCapabilities
+                this._recvRtpCapabilities,
               );
 
               logger.debug('load() succeeded');
@@ -4272,7 +4274,7 @@
                 this._logger.error(
                   'safeEmit() | event listener threw an error [event:%s]:%o',
                   event,
-                  error
+                  error,
                 );
               }
             }
@@ -4475,7 +4477,7 @@
              * Invalid setter.
              */
             set appData(
-              appData // eslint-disable-line no-unused-vars
+              appData, // eslint-disable-line no-unused-vars
             ) {
               throw new Error('cannot override appData object');
             }
@@ -4694,7 +4696,7 @@
               logger.debug(
                 'constructor() [id:%s, direction:%s]',
                 id,
-                direction
+                direction,
               );
 
               // Id.
@@ -4815,7 +4817,7 @@
              * Invalid setter.
              */
             set appData(
-              appData // eslint-disable-line no-unused-vars
+              appData, // eslint-disable-line no-unused-vars
             ) {
               throw new Error('cannot override appData object');
             }
@@ -4880,7 +4882,7 @@
 
               // Enqueue command.
               return this._awaitQueue.push(async () =>
-                this._handler.restartIce({ iceParameters })
+                this._handler.restartIce({ iceParameters }),
               );
             }
 
@@ -4902,7 +4904,7 @@
 
               // Enqueue command.
               return this._awaitQueue.push(async () =>
-                this._handler.updateIceServers({ iceServers })
+                this._handler.updateIceServers({ iceServers }),
               );
             }
 
@@ -4978,7 +4980,7 @@
                         track,
                         encodings: normalizedEncodings,
                         codecOptions,
-                      }
+                      },
                     );
 
                     try {
@@ -5061,7 +5063,7 @@
                 // Ensure the device can consume it.
                 const canConsume = ortc.canReceive(
                   rtpParameters,
-                  this._extendedRtpCapabilities
+                  this._extendedRtpCapabilities,
                 );
 
                 if (!canConsume)
@@ -5105,9 +5107,9 @@
                     'connect',
                     { dtlsParameters },
                     callback,
-                    errback
+                    errback,
                   );
-                }
+                },
               );
 
               handler.on('@connectionstatechange', (connectionState) => {
@@ -5130,10 +5132,10 @@
 
                 this._awaitQueue
                   .push(async () =>
-                    this._handler.stopSending({ localId: producer.localId })
+                    this._handler.stopSending({ localId: producer.localId }),
                   )
                   .catch((error) =>
-                    logger.warn('producer.close() failed:%o', error)
+                    logger.warn('producer.close() failed:%o', error),
                   );
               });
 
@@ -5143,7 +5145,7 @@
                     this._handler.replaceTrack({
                       localId: producer.localId,
                       track,
-                    })
+                    }),
                   )
                   .then(callback)
                   .catch(errback);
@@ -5157,11 +5159,11 @@
                       this._handler.setMaxSpatialLayer({
                         localId: producer.localId,
                         spatialLayer,
-                      })
+                      }),
                     )
                     .then(callback)
                     .catch(errback);
-                }
+                },
               );
 
               producer.on('@getstats', (callback, errback) => {
@@ -5183,7 +5185,7 @@
 
                 this._awaitQueue
                   .push(async () =>
-                    this._handler.stopReceiving({ localId: consumer.localId })
+                    this._handler.stopReceiving({ localId: consumer.localId }),
                   )
                   .catch(() => {});
               });
@@ -5240,7 +5242,7 @@
                 return ReactNative;
               } else {
                 logger.warn(
-                  'unsupported ReactNative without RTCPeerConnection'
+                  'unsupported ReactNative without RTCPeerConnection',
                 );
 
                 return null;
@@ -5315,7 +5317,7 @@
                 logger.warn(
                   'browser not supported [name:%s, version:%s]',
                   browser.getBrowserName(),
-                  browser.getBrowserVersion()
+                  browser.getBrowserVersion(),
                 );
 
                 return null;
@@ -5431,7 +5433,7 @@
                   rtcpMuxPolicy: 'require',
                   sdpSemantics: 'plan-b',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Handle RTCPeerConnection connection status.
@@ -5483,7 +5485,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -5496,7 +5498,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -5538,7 +5540,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               this._stream.addTrack(track);
@@ -5548,7 +5550,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -5562,7 +5564,7 @@
 
                 localSdpObject = sdpTransform.parse(offer.sdp);
                 offerMediaObject = localSdpObject.media.find(
-                  (m) => m.type === 'video'
+                  (m) => m.type === 'video',
                 );
 
                 sdpPlanBUtils.addLegacySimulcast({
@@ -5579,16 +5581,16 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject = localSdpObject.media.find(
-                (m) => m.type === track.kind
+                (m) => m.type === track.kind,
               );
 
               // Set RTCP CNAME.
@@ -5612,7 +5614,7 @@
                   if (encodings[idx])
                     Object.assign(
                       sendingRtpParameters.encodings[idx],
-                      encodings[idx]
+                      encodings[idx],
                     );
                 }
               }
@@ -5641,7 +5643,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -5673,7 +5675,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               try {
@@ -5684,7 +5686,7 @@
                 if (this._stream.getTracks().length === 0) {
                   logger.warn(
                     'stopSending() | ignoring expected error due no sending tracks: %s',
-                    error.toString()
+                    error.toString(),
                   );
 
                   return;
@@ -5699,14 +5701,14 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
             }
 
             async replaceTrack(
-              { localId, track } // eslint-disable-line no-unused-vars
+              { localId, track }, // eslint-disable-line no-unused-vars
             ) {
               throw new UnsupportedError('not implemented');
             }
@@ -5717,7 +5719,7 @@
             }
 
             async getSenderStats(
-              { localId } // eslint-disable-line no-unused-vars
+              { localId }, // eslint-disable-line no-unused-vars
             ) {
               throw new UnsupportedError('not implemented');
             }
@@ -5734,7 +5736,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -5743,7 +5745,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -5779,7 +5781,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -5787,7 +5789,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === mid
+                (m) => String(m.mid) === mid,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -5810,7 +5812,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -5846,7 +5848,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -5855,14 +5857,14 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
             }
 
             async getReceiverStats(
-              { localId } // eslint-disable-line no-unused-vars
+              { localId }, // eslint-disable-line no-unused-vars
             ) {
               throw new UnsupportedError('not implemented');
             }
@@ -5879,7 +5881,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -5888,7 +5890,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -5952,22 +5954,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -6059,7 +6061,7 @@
                   rtcpMuxPolicy: 'require',
                   sdpSemantics: 'plan-b',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Handle RTCPeerConnection connection status.
@@ -6111,7 +6113,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -6124,7 +6126,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -6166,7 +6168,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               this._stream.addTrack(track);
@@ -6176,7 +6178,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -6190,7 +6192,7 @@
 
                 localSdpObject = sdpTransform.parse(offer.sdp);
                 offerMediaObject = localSdpObject.media.find(
-                  (m) => m.type === 'video'
+                  (m) => m.type === 'video',
                 );
 
                 sdpPlanBUtils.addLegacySimulcast({
@@ -6207,16 +6209,16 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject = localSdpObject.media.find(
-                (m) => m.type === track.kind
+                (m) => m.type === track.kind,
               );
 
               // Set RTCP CNAME.
@@ -6240,7 +6242,7 @@
                   if (encodings[idx])
                     Object.assign(
                       sendingRtpParameters.encodings[idx],
-                      encodings[idx]
+                      encodings[idx],
                     );
                 }
               }
@@ -6269,7 +6271,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -6304,7 +6306,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               try {
@@ -6315,7 +6317,7 @@
                 if (this._stream.getTracks().length === 0) {
                   logger.warn(
                     'stopSending() | ignoring expected error due no sending tracks: %s',
-                    error.toString()
+                    error.toString(),
                   );
 
                   return;
@@ -6330,7 +6332,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -6340,7 +6342,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const oldTrack = this._mapIdTrack.get(localId);
@@ -6392,7 +6394,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -6401,7 +6403,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -6436,7 +6438,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -6444,7 +6446,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === mid
+                (m) => String(m.mid) === mid,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -6467,7 +6469,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -6506,7 +6508,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -6515,7 +6517,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -6542,7 +6544,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -6551,7 +6553,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -6615,22 +6617,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -6721,7 +6723,7 @@
                   rtcpMuxPolicy: 'require',
                   sdpSemantics: 'unified-plan',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Map of RTCTransceivers indexed by MID.
@@ -6777,7 +6779,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -6790,7 +6792,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -6824,7 +6826,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               const transceiver = this._pc.addTransceiver(track, {
@@ -6835,7 +6837,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -6867,7 +6869,7 @@
               let hackVp9Svc = false;
 
               const layers = parseScalabilityMode(
-                (encodings || [{}])[0].scalabilityMode
+                (encodings || [{}])[0].scalabilityMode,
               );
 
               if (
@@ -6898,7 +6900,7 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -6910,7 +6912,7 @@
               sendingRtpParameters.mid = localId;
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject =
                 localSdpObject.media[localSdpObject.media.length - 1];
@@ -6934,7 +6936,7 @@
                   if (encodings[idx])
                     Object.assign(
                       sendingRtpParameters.encodings[idx],
-                      encodings[idx]
+                      encodings[idx],
                     );
                 }
               }
@@ -6971,7 +6973,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -6998,7 +7000,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -7007,7 +7009,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -7017,7 +7019,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -7032,7 +7034,7 @@
               logger.debug(
                 'setMaxSpatialLayer() [localId:%s, spatialLayer:%s]',
                 localId,
-                spatialLayer
+                spatialLayer,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -7071,7 +7073,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -7080,7 +7082,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -7114,7 +7116,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -7122,7 +7124,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === localId
+                (m) => String(m.mid) === localId,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -7145,7 +7147,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -7180,7 +7182,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -7189,7 +7191,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -7216,7 +7218,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -7225,7 +7227,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -7289,22 +7291,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -7395,7 +7397,7 @@
                   rtcpMuxPolicy: 'require',
                   sdpSemantics: 'unified-plan',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Map of RTCTransceivers indexed by MID.
@@ -7451,7 +7453,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -7464,7 +7466,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -7498,7 +7500,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               if (encodings && encodings.length > 1) {
@@ -7516,7 +7518,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -7527,14 +7529,14 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               // Special case for VP9 with SVC.
               let hackVp9Svc = false;
 
               const layers = parseScalabilityMode(
-                (encodings || [{}])[0].scalabilityMode
+                (encodings || [{}])[0].scalabilityMode,
               );
 
               if (
@@ -7572,7 +7574,7 @@
               sendingRtpParameters.mid = localId;
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject =
                 localSdpObject.media[localSdpObject.media.length - 1];
@@ -7632,7 +7634,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -7659,7 +7661,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -7668,7 +7670,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -7678,7 +7680,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -7693,7 +7695,7 @@
               logger.debug(
                 'setMaxSpatialLayer() [localId:%s, spatialLayer:%s]',
                 localId,
-                spatialLayer
+                spatialLayer,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -7732,7 +7734,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -7741,7 +7743,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -7775,7 +7777,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -7783,7 +7785,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === localId
+                (m) => String(m.mid) === localId,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -7806,7 +7808,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -7841,7 +7843,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -7850,7 +7852,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -7877,7 +7879,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -7886,7 +7888,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -7950,22 +7952,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -8050,11 +8052,11 @@
               this._sendingRtpParametersByKind = {
                 audio: ortc.getSendingRtpParameters(
                   'audio',
-                  extendedRtpCapabilities
+                  extendedRtpCapabilities,
                 ),
                 video: ortc.getSendingRtpParameters(
                   'video',
-                  extendedRtpCapabilities
+                  extendedRtpCapabilities,
                 ),
               };
 
@@ -8143,7 +8145,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               if (!this._transportReady)
@@ -8153,10 +8155,10 @@
 
               const rtpSender = new RTCRtpSender(track, this._dtlsTransport);
               const rtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
               const useRtx = rtpParameters.codecs.some((codec) =>
-                /.+\/rtx$/i.test(codec.mimeType)
+                /.+\/rtx$/i.test(codec.mimeType),
               );
 
               if (!encodings) encodings = [{}];
@@ -8184,7 +8186,7 @@
 
               logger.debug(
                 'send() | calling rtpSender.send() [params:%o]',
-                edgeRtpParameters
+                edgeRtpParameters,
               );
 
               await rtpSender.send(edgeRtpParameters);
@@ -8211,7 +8213,7 @@
               } catch (error) {
                 logger.warn(
                   'stopSending() | rtpSender.stop() failed:%o',
-                  error
+                  error,
                 );
 
                 throw error;
@@ -8222,7 +8224,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const rtpSender = this._rtpSenders.get(localId);
@@ -8242,7 +8244,7 @@
               logger.debug(
                 'setMaxSpatialLayer() [localId:%s, spatialLayer:%s]',
                 localId,
-                spatialLayer
+                spatialLayer,
               );
 
               const rtpSender = this._rtpSenders.get(localId);
@@ -8288,7 +8290,7 @@
 
               logger.debug(
                 'receive() | calling rtpReceiver.receive() [params:%o]',
-                edgeRtpParameters
+                edgeRtpParameters,
               );
 
               await rtpReceiver.receive(edgeRtpParameters);
@@ -8317,7 +8319,7 @@
               } catch (error) {
                 logger.warn(
                   'stopReceiving() | rtpReceiver.stop() failed:%o',
-                  error
+                  error,
                 );
               }
             }
@@ -8342,7 +8344,7 @@
               this._iceTransport.start(
                 this._iceGatherer,
                 iceParameters,
-                'controlling'
+                'controlling',
               );
 
               for (const candidate of this._remoteIceCandidates) {
@@ -8376,7 +8378,7 @@
               } catch (error) {
                 logger.debug(
                   '_setIceGatherer() | iceGatherer.gather() failed: %s',
-                  error.toString()
+                  error.toString(),
                 );
               }
 
@@ -8433,7 +8435,7 @@
               iceTransport.addEventListener('candidatepairchange', (event) => {
                 logger.debug(
                   'iceTransport "candidatepairchange" event [pair:%o]',
-                  event.pair
+                  event.pair,
                 );
               });
 
@@ -8447,7 +8449,7 @@
               dtlsTransport.addEventListener('statechange', () => {
                 logger.debug(
                   'dtlsTransport "statechange" event [state:%s]',
-                  dtlsTransport.state
+                  dtlsTransport.state,
                 );
               });
 
@@ -8455,7 +8457,7 @@
               dtlsTransport.addEventListener('dtlsstatechange', () => {
                 logger.debug(
                   'dtlsTransport "dtlsstatechange" event [state:%s]',
-                  dtlsTransport.state
+                  dtlsTransport.state,
                 );
 
                 if (dtlsTransport.state === 'closed')
@@ -8484,7 +8486,7 @@
               this._iceTransport.start(
                 this._iceGatherer,
                 this._remoteIceParameters,
-                'controlling'
+                'controlling',
               );
 
               // Add remote ICE candidates.
@@ -8507,7 +8509,7 @@
                       fingerprint.algorithm === 'sha-384' ||
                       fingerprint.algorithm === 'sha-512'
                     );
-                  }
+                  },
                 );
 
               // Start the RTCDtlsTransport.
@@ -8574,7 +8576,7 @@
                   bundlePolicy: 'max-bundle',
                   rtcpMuxPolicy: 'require',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Map of RTCTransceivers indexed by MID.
@@ -8618,7 +8620,7 @@
             }
 
             async updateIceServers(
-              { iceServers } // eslint-disable-line no-unused-vars
+              { iceServers }, // eslint-disable-line no-unused-vars
             ) {
               logger.debug('updateIceServers()');
 
@@ -8629,7 +8631,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -8642,7 +8644,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -8676,7 +8678,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               let reverseEncodings;
@@ -8708,7 +8710,7 @@
               const offer = await this._pc.createOffer();
               let localSdpObject = sdpTransform.parse(offer.sdp);
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               // In Firefox use DTLS role client even if we are the "offerer" since
@@ -8721,7 +8723,7 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -8733,7 +8735,7 @@
               sendingRtpParameters.mid = localId;
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
 
               const offerMediaObject =
@@ -8791,7 +8793,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -8818,7 +8820,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -8827,7 +8829,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -8837,7 +8839,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -8852,7 +8854,7 @@
               logger.debug(
                 'setMaxSpatialLayer() [localId:%s, spatialLayer:%s]',
                 localId,
-                spatialLayer
+                spatialLayer,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -8895,7 +8897,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -8904,7 +8906,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -8938,7 +8940,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -8946,7 +8948,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === localId
+                (m) => String(m.mid) === localId,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -8969,7 +8971,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -9003,7 +9005,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -9012,7 +9014,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -9039,7 +9041,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -9048,7 +9050,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -9147,22 +9149,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -9254,7 +9256,7 @@
                   rtcpMuxPolicy: 'require',
                   sdpSemantics: 'plan-b',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Handle RTCPeerConnection connection status.
@@ -9306,7 +9308,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -9319,7 +9321,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -9357,7 +9359,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               if (!track.streamReactTag)
@@ -9373,7 +9375,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -9387,7 +9389,7 @@
 
                 localSdpObject = sdpTransform.parse(offer.sdp);
                 offerMediaObject = localSdpObject.media.find(
-                  (m) => m.type === 'video'
+                  (m) => m.type === 'video',
                 );
 
                 sdpPlanBUtils.addLegacySimulcast({
@@ -9404,7 +9406,7 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               const offerDesc = new RTCSessionDescription(offer);
@@ -9412,10 +9414,10 @@
               await this._pc.setLocalDescription(offerDesc);
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject = localSdpObject.media.find(
-                (m) => m.type === track.kind
+                (m) => m.type === track.kind,
               );
 
               // Set RTCP CNAME.
@@ -9439,7 +9441,7 @@
                   if (encodings[idx])
                     Object.assign(
                       sendingRtpParameters.encodings[idx],
-                      encodings[idx]
+                      encodings[idx],
                     );
                 }
               }
@@ -9470,7 +9472,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               const answerDesc = new RTCSessionDescription(answer);
@@ -9507,7 +9509,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               try {
@@ -9518,7 +9520,7 @@
                 if (this._stream.getTracks().length === 0) {
                   logger.warn(
                     'stopSending() | ignoring expected error due no sending tracks: %s',
-                    error.toString()
+                    error.toString(),
                   );
 
                   return;
@@ -9533,7 +9535,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               const answerDesc = new RTCSessionDescription(answer);
@@ -9542,7 +9544,7 @@
             }
 
             async replaceTrack(
-              { localId, track } // eslint-disable-line no-unused-vars
+              { localId, track }, // eslint-disable-line no-unused-vars
             ) {
               throw new UnsupportedError('not implemented');
             }
@@ -9553,7 +9555,7 @@
             }
 
             async getSenderStats(
-              { localId } // eslint-disable-line no-unused-vars
+              { localId }, // eslint-disable-line no-unused-vars
             ) {
               throw new UnsupportedError('not implemented');
             }
@@ -9570,7 +9572,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -9579,7 +9581,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               const answerDesc = new RTCSessionDescription(answer);
@@ -9617,7 +9619,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               const offerDesc = new RTCSessionDescription(offer);
@@ -9627,7 +9629,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === mid
+                (m) => String(m.mid) === mid,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -9650,7 +9652,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               const answerDesc = new RTCSessionDescription(answer);
@@ -9693,7 +9695,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               const offerDesc = new RTCSessionDescription(offer);
@@ -9704,14 +9706,14 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
             }
 
             async getReceiverStats(
-              { localId } // eslint-disable-line no-unused-vars
+              { localId }, // eslint-disable-line no-unused-vars
             ) {
               throw new UnsupportedError('not implemented');
             }
@@ -9728,7 +9730,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               const offerDesc = new RTCSessionDescription(offer);
@@ -9739,7 +9741,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -9803,22 +9805,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -9909,7 +9911,7 @@
                   bundlePolicy: 'max-bundle',
                   rtcpMuxPolicy: 'require',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Handle RTCPeerConnection connection status.
@@ -9961,7 +9963,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -9974,7 +9976,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -10016,7 +10018,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               this._stream.addTrack(track);
@@ -10026,7 +10028,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -10040,7 +10042,7 @@
 
                 localSdpObject = sdpTransform.parse(offer.sdp);
                 offerMediaObject = localSdpObject.media.find(
-                  (m) => m.type === 'video'
+                  (m) => m.type === 'video',
                 );
 
                 sdpPlanBUtils.addLegacySimulcast({
@@ -10057,16 +10059,16 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject = localSdpObject.media.find(
-                (m) => m.type === track.kind
+                (m) => m.type === track.kind,
               );
 
               // Set RTCP CNAME.
@@ -10090,7 +10092,7 @@
                   if (encodings[idx])
                     Object.assign(
                       sendingRtpParameters.encodings[idx],
-                      encodings[idx]
+                      encodings[idx],
                     );
                 }
               }
@@ -10121,7 +10123,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -10156,7 +10158,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               try {
@@ -10167,7 +10169,7 @@
                 if (this._stream.getTracks().length === 0) {
                   logger.warn(
                     'stopSending() | ignoring expected error due no sending tracks: %s',
-                    error.toString()
+                    error.toString(),
                   );
 
                   return;
@@ -10182,7 +10184,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -10192,7 +10194,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const oldTrack = this._mapIdTrack.get(localId);
@@ -10244,7 +10246,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -10253,7 +10255,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -10288,7 +10290,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -10296,7 +10298,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === mid
+                (m) => String(m.mid) === mid,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -10319,7 +10321,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -10358,7 +10360,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -10367,7 +10369,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -10394,7 +10396,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -10403,7 +10405,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -10466,22 +10468,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -10570,7 +10572,7 @@
                   bundlePolicy: 'max-bundle',
                   rtcpMuxPolicy: 'require',
                 },
-                proprietaryConstraints
+                proprietaryConstraints,
               );
 
               // Map of RTCTransceivers indexed by MID.
@@ -10626,7 +10628,7 @@
             async _setupTransport({ localDtlsRole, localSdpObject = null }) {
               if (!localSdpObject)
                 localSdpObject = sdpTransform.parse(
-                  this._pc.localDescription.sdp
+                  this._pc.localDescription.sdp,
                 );
 
               // Get our local DTLS parameters.
@@ -10639,7 +10641,7 @@
 
               // Update the remote DTLS role in the SDP.
               this._remoteSdp.updateDtlsRole(
-                localDtlsRole === 'client' ? 'server' : 'client'
+                localDtlsRole === 'client' ? 'server' : 'client',
               );
 
               // Need to tell the remote transport about our parameters.
@@ -10673,7 +10675,7 @@
               logger.debug(
                 'send() [kind:%s, track.id:%s]',
                 track.kind,
-                track.id
+                track.id,
               );
 
               const transceiver = this._pc.addTransceiver(track, {
@@ -10684,7 +10686,7 @@
               let localSdpObject = sdpTransform.parse(offer.sdp);
               let offerMediaObject;
               const sendingRtpParameters = utils.clone(
-                this._sendingRtpParametersByKind[track.kind]
+                this._sendingRtpParametersByKind[track.kind],
               );
 
               if (!this._transportReady)
@@ -10714,7 +10716,7 @@
 
               logger.debug(
                 'send() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -10726,7 +10728,7 @@
               sendingRtpParameters.mid = localId;
 
               localSdpObject = sdpTransform.parse(
-                this._pc.localDescription.sdp
+                this._pc.localDescription.sdp,
               );
               offerMediaObject =
                 localSdpObject.media[localSdpObject.media.length - 1];
@@ -10750,7 +10752,7 @@
                   if (encodings[idx])
                     Object.assign(
                       sendingRtpParameters.encodings[idx],
-                      encodings[idx]
+                      encodings[idx],
                     );
                 }
               }
@@ -10781,7 +10783,7 @@
 
               logger.debug(
                 'send() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -10808,7 +10810,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -10817,7 +10819,7 @@
 
               logger.debug(
                 'stopSending() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -10827,7 +10829,7 @@
               logger.debug(
                 'replaceTrack() [localId:%s, track.id:%s]',
                 localId,
-                track.id
+                track.id,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -10842,7 +10844,7 @@
               logger.debug(
                 'setMaxSpatialLayer() [localId:%s, spatialLayer:%s]',
                 localId,
-                spatialLayer
+                spatialLayer,
               );
 
               const transceiver = this._mapMidTransceiver.get(localId);
@@ -10881,7 +10883,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setLocalDescription(offer);
@@ -10890,7 +10892,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setRemoteDescription(answer);
@@ -10924,7 +10926,7 @@
 
               logger.debug(
                 'receive() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -10932,7 +10934,7 @@
               let answer = await this._pc.createAnswer();
               const localSdpObject = sdpTransform.parse(answer.sdp);
               const answerMediaObject = localSdpObject.media.find(
-                (m) => String(m.mid) === localId
+                (m) => String(m.mid) === localId,
               );
 
               // May need to modify codec parameters in the answer based on codec
@@ -10955,7 +10957,7 @@
 
               logger.debug(
                 'receive() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -10990,7 +10992,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -10999,7 +11001,7 @@
 
               logger.debug(
                 'stopReceiving() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -11026,7 +11028,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setRemoteDescription() [offer:%o]',
-                offer
+                offer,
               );
 
               await this._pc.setRemoteDescription(offer);
@@ -11035,7 +11037,7 @@
 
               logger.debug(
                 'restartIce() | calling pc.setLocalDescription() [answer:%o]',
-                answer
+                answer,
               );
 
               await this._pc.setLocalDescription(answer);
@@ -11098,22 +11100,22 @@
                   const sendingRtpParametersByKind = {
                     audio: ortc.getSendingRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
                   const sendingRemoteRtpParametersByKind = {
                     audio: ortc.getSendingRemoteRtpParameters(
                       'audio',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                     video: ortc.getSendingRemoteRtpParameters(
                       'video',
-                      extendedRtpCapabilities
+                      extendedRtpCapabilities,
                     ),
                   };
 
@@ -11190,7 +11192,7 @@
 
                 if (parameters['packetization-mode'])
                   parameters['packetization-mode'] = Number(
-                    parameters['packetization-mode']
+                    parameters['packetization-mode'],
                   );
               }
 
@@ -11379,7 +11381,7 @@
                   } = codecOptions;
 
                   const offerCodec = offerRtpParameters.codecs.find(
-                    (c) => c.payloadType === codec.payloadType
+                    (c) => c.payloadType === codec.payloadType,
                   );
 
                   switch (codec.mimeType.toLowerCase()) {
@@ -11461,7 +11463,7 @@
               for (const ext of answerRtpParameters.headerExtensions) {
                 // Don't add a header extension if not present in the offer.
                 const found = (offerMediaObject.ext || []).some(
-                  (localExt) => localExt.uri === ext.uri
+                  (localExt) => localExt.uri === ext.uri,
                 );
 
                 if (!found) continue;
@@ -11496,7 +11498,7 @@
                 this._mediaObject.simulcast_03 = {
                   value: offerMediaObject.simulcast_03.value.replace(
                     /send/g,
-                    'recv'
+                    'recv',
                   ),
                 };
 
@@ -11682,7 +11684,7 @@
              * @param {String} role
              */
             setDtlsRole(
-              role // eslint-disable-line no-unused-vars
+              role, // eslint-disable-line no-unused-vars
             ) {
               // Always 'actpass'.
               this._mediaObject.setup = 'actpass';
@@ -11742,13 +11744,13 @@
                   : undefined;
 
               this._mediaObject.ssrcs = this._mediaObject.ssrcs.filter(
-                (s) => s.id !== ssrc && s.id !== rtxSsrc
+                (s) => s.id !== ssrc && s.id !== rtxSsrc,
               );
 
               if (rtxSsrc) {
                 this._mediaObject.ssrcGroups =
                   this._mediaObject.ssrcGroups.filter(
-                    (group) => group.ssrcs !== `${ssrc} ${rtxSsrc}`
+                    (group) => group.ssrcs !== `${ssrc} ${rtxSsrc}`,
                   );
               }
             }
@@ -11858,7 +11860,7 @@
             updateIceParameters(iceParameters) {
               logger.debug(
                 'updateIceParameters() [iceParameters:%o]',
-                iceParameters
+                iceParameters,
               );
 
               this._iceParameters = iceParameters;
@@ -12061,7 +12063,7 @@
                 // Special case to convert parameter value to string.
                 if (parameters && parameters['profile-level-id'])
                   parameters['profile-level-id'] = String(
-                    parameters['profile-level-id']
+                    parameters['profile-level-id'],
                   );
 
                 codec.parameters = parameters;
@@ -12113,7 +12115,7 @@
            */
           exports.extractDtlsParameters = function ({ sdpObject }) {
             const mediaObject = (sdpObject.media || []).find(
-              (m) => m.iceUfrag && m.port !== 0
+              (m) => m.iceUfrag && m.port !== 0,
             );
 
             if (!mediaObject) throw new Error('no active media section found');
@@ -12156,7 +12158,7 @@
            */
           exports.getCname = function ({ offerMediaObject }) {
             const ssrcCnameLine = (offerMediaObject.ssrcs || []).find(
-              (line) => line.attribute === 'cname'
+              (line) => line.attribute === 'cname',
             );
 
             if (!ssrcCnameLine) return '';
@@ -12182,7 +12184,7 @@
               if (mimeType !== 'audio/opus') continue;
 
               const rtp = (answerMediaObject.rtp || []).find(
-                (r) => r.payload === codec.payloadType
+                (r) => r.payload === codec.payloadType,
               );
 
               if (!rtp) continue;
@@ -12191,7 +12193,7 @@
               answerMediaObject.fmtp = answerMediaObject.fmtp || [];
 
               let fmtp = answerMediaObject.fmtp.find(
-                (f) => f.payload === codec.payloadType
+                (f) => f.payload === codec.payloadType,
               );
 
               if (!fmtp) {
@@ -12256,7 +12258,7 @@
 
             if (ssrcs.size === 0)
               throw new Error(
-                `a=ssrc line with msid information not found [track.id:${track.id}]`
+                `a=ssrc line with msid information not found [track.id:${track.id}]`,
               );
 
             const ssrcToRtxSsrc = new Map();
@@ -12336,7 +12338,7 @@
 
             if (!ssrcMsidLine)
               throw new Error(
-                `a=ssrc line with msid information not found [track.id:${track.id}]`
+                `a=ssrc line with msid information not found [track.id:${track.id}]`,
               );
 
             // Get the SSRC for RTX.
@@ -12353,12 +12355,12 @@
             });
 
             const ssrcCnameLine = offerMediaObject.ssrcs.find(
-              (line) => line.attribute === 'cname' && line.id === firstSsrc
+              (line) => line.attribute === 'cname' && line.id === firstSsrc,
             );
 
             if (!ssrcCnameLine)
               throw new Error(
-                `a=ssrc line with cname information not found [track.id:${track.id}]`
+                `a=ssrc line with cname information not found [track.id:${track.id}]`,
               );
 
             const cname = ssrcCnameLine.value;
@@ -12497,7 +12499,7 @@
 
             // Get the SSRC.
             const ssrcMsidLine = (offerMediaObject.ssrcs || []).find(
-              (line) => line.attribute === 'msid'
+              (line) => line.attribute === 'msid',
             );
 
             if (!ssrcMsidLine)
@@ -12521,7 +12523,7 @@
             });
 
             const ssrcCnameLine = offerMediaObject.ssrcs.find(
-              (line) => line.attribute === 'cname'
+              (line) => line.attribute === 'cname',
             );
 
             if (!ssrcCnameLine)
@@ -12629,7 +12631,7 @@
            */
           exports.getExtendedRtpCapabilities = function (
             localCaps,
-            remoteCaps
+            remoteCaps,
           ) {
             const extendedRtpCapabilities = {
               codecs: [],
@@ -12655,7 +12657,7 @@
                   matchCodecs(localCodec, remoteCodec, {
                     strict: true,
                     modify: true,
-                  })
+                  }),
               );
 
               if (matchingLocalCodec) {
@@ -12670,7 +12672,7 @@
                   channels: matchingLocalCodec.channels,
                   rtcpFeedback: reduceRtcpFeedback(
                     matchingLocalCodec,
-                    remoteCodec
+                    remoteCodec,
                   ),
                   localParameters: matchingLocalCodec.parameters || {},
                   remoteParameters: remoteCodec.parameters || {},
@@ -12687,13 +12689,14 @@
               const matchingLocalRtxCodec = (localCaps.codecs || []).find(
                 (localCodec) =>
                   /.+\/rtx$/i.test(localCodec.mimeType) &&
-                  localCodec.parameters.apt === extendedCodec.localPayloadType
+                  localCodec.parameters.apt === extendedCodec.localPayloadType,
               );
 
               const matchingRemoteRtxCodec = (remoteCaps.codecs || []).find(
                 (remoteCodec) =>
                   /.+\/rtx$/i.test(remoteCodec.mimeType) &&
-                  remoteCodec.parameters.apt === extendedCodec.remotePayloadType
+                  remoteCodec.parameters.apt ===
+                    extendedCodec.remotePayloadType,
               );
 
               if (matchingLocalRtxCodec && matchingRemoteRtxCodec) {
@@ -12707,7 +12710,7 @@
             // Match header extensions.
             for (const remoteExt of remoteCaps.headerExtensions || []) {
               const matchingLocalExt = (localCaps.headerExtensions || []).find(
-                (localExt) => matchHeaderExtensions(localExt, remoteExt)
+                (localExt) => matchHeaderExtensions(localExt, remoteExt),
               );
 
               if (matchingLocalExt) {
@@ -12823,7 +12826,7 @@
            */
           exports.getSendingRtpParameters = function (
             kind,
-            extendedRtpCapabilities
+            extendedRtpCapabilities,
           ) {
             const rtpParameters = {
               mid: null,
@@ -12899,7 +12902,7 @@
            */
           exports.getSendingRemoteRtpParameters = function (
             kind,
-            extendedRtpCapabilities
+            extendedRtpCapabilities,
           ) {
             const rtpParameters = {
               mid: null,
@@ -12967,30 +12970,30 @@
               rtpParameters.headerExtensions.some(
                 (ext) =>
                   ext.uri ===
-                  'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01'
+                  'http://www.ietf.org/id/draft-holmer-rmcat-transport-wide-cc-extensions-01',
               )
             ) {
               for (const codec of rtpParameters.codecs) {
                 codec.rtcpFeedback = (codec.rtcpFeedback || []).filter(
-                  (fb) => fb.type !== 'goog-remb'
+                  (fb) => fb.type !== 'goog-remb',
                 );
               }
             } else if (
               rtpParameters.headerExtensions.some(
                 (ext) =>
                   ext.uri ===
-                  'http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time'
+                  'http://www.webrtc.org/experiments/rtp-hdrext/abs-send-time',
               )
             ) {
               for (const codec of rtpParameters.codecs) {
                 codec.rtcpFeedback = (codec.rtcpFeedback || []).filter(
-                  (fb) => fb.type !== 'transport-cc'
+                  (fb) => fb.type !== 'transport-cc',
                 );
               }
             } else {
               for (const codec of rtpParameters.codecs) {
                 codec.rtcpFeedback = (codec.rtcpFeedback || []).filter(
-                  (fb) => fb.type !== 'transport-cc' && fb.type !== 'goog-remb'
+                  (fb) => fb.type !== 'transport-cc' && fb.type !== 'goog-remb',
                 );
               }
             }
@@ -13008,7 +13011,7 @@
            */
           exports.canSend = function (kind, extendedRtpCapabilities) {
             return extendedRtpCapabilities.codecs.some(
-              (codec) => codec.kind === kind
+              (codec) => codec.kind === kind,
             );
           };
 
@@ -13023,21 +13026,22 @@
            */
           exports.canReceive = function (
             rtpParameters,
-            extendedRtpCapabilities
+            extendedRtpCapabilities,
           ) {
             if (rtpParameters.codecs.length === 0) return false;
 
             const firstMediaCodec = rtpParameters.codecs[0];
 
             return extendedRtpCapabilities.codecs.some(
-              (codec) => codec.remotePayloadType === firstMediaCodec.payloadType
+              (codec) =>
+                codec.remotePayloadType === firstMediaCodec.payloadType,
             );
           };
 
           function matchCodecs(
             aCodec,
             bCodec,
-            { strict = false, modify = false } = {}
+            { strict = false, modify = false } = {},
           ) {
             const aMimeType = aCodec.mimeType.toLowerCase();
             const bMimeType = bCodec.mimeType.toLowerCase();
@@ -13076,7 +13080,7 @@
                     selectedProfileLevelId =
                       h264.generateProfileLevelIdForAnswer(
                         aCodec.parameters,
-                        bCodec.parameters
+                        bCodec.parameters,
                       );
                   } catch (error) {
                     return false;
@@ -13129,7 +13133,7 @@
                 (bFb) =>
                   bFb.type === aFb.type &&
                   (bFb.parameter === aFb.parameter ||
-                    (!bFb.parameter && !aFb.parameter))
+                    (!bFb.parameter && !aFb.parameter)),
               );
 
               if (matchingBFb) reducedRtcpFeedback.push(matchingBFb);
@@ -13143,7 +13147,7 @@
       33: [
         function (require, module, exports) {
           const ScalabilityModeRegex = new RegExp(
-            '^[LS]([1-9]\\d{0,1})T([1-9]\\d{0,1})'
+            '^[LS]([1-9]\\d{0,1})T([1-9]\\d{0,1})',
           );
 
           exports.parse = function (scalabilityMode) {
@@ -13553,8 +13557,8 @@
                   return o.encoding
                     ? 'rtpmap:%d %s/%s/%s'
                     : o.rate
-                    ? 'rtpmap:%d %s/%s'
-                    : 'rtpmap:%d %s';
+                      ? 'rtpmap:%d %s/%s'
+                      : 'rtpmap:%d %s';
                 },
               },
               {
@@ -13828,7 +13832,7 @@
                     // send [x=800,y=640,sar=1.1,q=0.6] [x=480,y=320]
                     '[\\s\\t]+(send|recv)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*)' +
                     // recv [x=330,y=250]
-                    '(?:[\\s\\t]+(recv|send)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*))?'
+                    '(?:[\\s\\t]+(recv|send)[\\s\\t]+(\\*|\\[\\S+\\](?:[\\s\\t]+\\[\\S+\\])*))?',
                 ),
                 names: ['pt', 'dir1', 'attrs1', 'dir2', 'attrs2'],
                 format: function (o) {
@@ -13847,7 +13851,7 @@
                     // space + recv 6;~7,~8
                     '(?:\\s?(send|recv) ([a-zA-Z0-9\\-_~;,]+))?' +
                     // end
-                    '$'
+                    '$',
                 ),
                 names: ['dir1', 'list1', 'dir2', 'list2'],
                 format: function (o) {
@@ -13977,14 +13981,14 @@
             var keyLocation = obj.push
               ? {} // blank object that will be pushed
               : needsBlank
-              ? location[obj.name]
-              : location; // otherwise, named location or root
+                ? location[obj.name]
+                : location; // otherwise, named location or root
 
             attachProperties(
               content.match(obj.reg),
               keyLocation,
               obj.names,
-              obj.name
+              obj.name,
             );
 
             if (obj.push) {
@@ -14218,6 +14222,6 @@
       ],
     },
     {},
-    [31]
+    [31],
   )(31);
 });

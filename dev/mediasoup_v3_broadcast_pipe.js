@@ -61,7 +61,7 @@ if (serverOptions.useHttps) {
         serverOptions.hostName +
         ':' +
         webServer.address().port +
-        '/'
+        '/',
     );
   });
 } else {
@@ -72,7 +72,7 @@ if (serverOptions.useHttps) {
         serverOptions.hostName +
         ':' +
         webServer.address().port +
-        '/'
+        '/',
     );
   });
 }
@@ -103,7 +103,7 @@ io.on('connection', function (socket) {
     'client connected. socket id=' +
       getId(socket) +
       '  , total clients=' +
-      getClientCount()
+      getClientCount(),
   );
 
   socket.on('disconnect', function () {
@@ -112,7 +112,7 @@ io.on('connection', function (socket) {
       'client disconnected. socket id=' +
         getId(socket) +
         '  , total clients=' +
-        getClientCount()
+        getClientCount(),
     );
     cleanUpPeer(socket);
   });
@@ -248,7 +248,7 @@ io.on('connection', function (socket) {
         const { consumer, params } = await createConsumer(
           transport,
           videoProducer,
-          data.rtpCapabilities
+          data.rtpCapabilities,
         ); // producer must exist before consume
         //subscribeConsumer = consumer;
         const id = getId(socket);
@@ -291,7 +291,7 @@ io.on('connection', function (socket) {
         const { consumer, params } = await createConsumer(
           transport,
           audioProducer,
-          data.rtpCapabilities
+          data.rtpCapabilities,
         ); // producer must exist before consume
         //subscribeConsumer = consumer;
         const id = getId(socket);
@@ -562,7 +562,7 @@ async function pipeProducerToConsumer(producer) {
   } catch (error) {
     console.error(
       'pipeToRouter() | error creating pipe Consumer/Producer pair:%o',
-      error
+      error,
     );
 
     if (pipeConsumer) pipeConsumer.close();
@@ -638,7 +638,7 @@ function removeAllConsumers() {
   }
   console.log(
     'removeAllConsumers videoConsumers count=' +
-      Object.keys(videoConsumers).length
+      Object.keys(videoConsumers).length,
   );
 
   for (const key in audioConsumers) {
@@ -651,7 +651,7 @@ function removeAllConsumers() {
 
 async function createTransport(router) {
   const transport = await router.createWebRtcTransport(
-    mediasoupOptions.webRtcTransport
+    mediasoupOptions.webRtcTransport,
   );
   console.log('-- create transport id=' + transport.id);
 

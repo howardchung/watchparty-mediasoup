@@ -16,7 +16,7 @@ const cert = process.env.SSL_CERT_FILE
   ? fs.readFileSync(process.env.SSL_CERT_FILE).toString()
   : '';
 const server =
-  (key && cert)
+  key && cert
     ? https
         .createServer({
           key,
@@ -66,7 +66,12 @@ const mediasoupOptions = {
   },
   // WebRtcTransport settings
   webRtcTransport: {
-    listenIps: [{ ip: '0.0.0.0', announcedIp: execSync(`curl https://api.ipify.org`).toString('utf8')}],
+    listenIps: [
+      {
+        ip: '0.0.0.0',
+        announcedIp: execSync(`curl https://api.ipify.org`).toString('utf8'),
+      },
+    ],
     enableUdp: true,
     enableTcp: true,
     preferUdp: true,
@@ -96,7 +101,7 @@ async function start() {
 
     console.log(
       'client connected. socket id=' + getId(socket),
-      'namespace=' + socket.nsp.name
+      'namespace=' + socket.nsp.name,
     );
     socket.on('disconnect', function () {
       // close user connection
@@ -229,7 +234,7 @@ async function start() {
           const res = await room.createConsumer(
             transport,
             room.videoProducer,
-            data.rtpCapabilities
+            data.rtpCapabilities,
           ); // producer must exist before consume
           if (res) {
             const { consumer, params } = res;
@@ -271,7 +276,7 @@ async function start() {
           const res = await room.createConsumer(
             transport,
             room.audioProducer,
-            data.rtpCapabilities
+            data.rtpCapabilities,
           ); // producer must exist before consume
           if (res) {
             const { consumer, params } = res;
@@ -406,14 +411,14 @@ class Room {
   addConsumerTrasport = (id, transport) => {
     this.transports[id] = transport;
     console.log(
-      'consumerTransports count=' + Object.keys(this.transports).length
+      'consumerTransports count=' + Object.keys(this.transports).length,
     );
   };
 
   removeConsumerTransport = (id) => {
     delete this.transports[id];
     console.log(
-      'consumerTransports count=' + Object.keys(this.transports).length
+      'consumerTransports count=' + Object.keys(this.transports).length,
     );
   };
 
@@ -424,14 +429,14 @@ class Room {
   addVideoConsumer = (id, consumer) => {
     this.videoConsumers[id] = consumer;
     console.log(
-      'videoConsumers count=' + Object.keys(this.videoConsumers).length
+      'videoConsumers count=' + Object.keys(this.videoConsumers).length,
     );
   };
 
   removeVideoConsumer = (id) => {
     delete this.videoConsumers[id];
     console.log(
-      'videoConsumers count=' + Object.keys(this.videoConsumers).length
+      'videoConsumers count=' + Object.keys(this.videoConsumers).length,
     );
   };
 
@@ -442,20 +447,20 @@ class Room {
   addAudioConsumer = (id, consumer) => {
     this.audioConsumers[id] = consumer;
     console.log(
-      'audioConsumers count=' + Object.keys(this.audioConsumers).length
+      'audioConsumers count=' + Object.keys(this.audioConsumers).length,
     );
   };
 
   removeAudioConsumer = (id) => {
     delete this.audioConsumers[id];
     console.log(
-      'audioConsumers count=' + Object.keys(this.audioConsumers).length
+      'audioConsumers count=' + Object.keys(this.audioConsumers).length,
     );
   };
 
   createTransport = async () => {
     const transport = await this.router.createWebRtcTransport(
-      mediasoupOptions.webRtcTransport
+      mediasoupOptions.webRtcTransport,
     );
     console.log('-- create transport id=' + transport.id);
     console.log(transport.iceCandidates);
@@ -473,7 +478,7 @@ class Room {
   createConsumer = async (
     transport: mediasoup.types.Transport,
     producer: mediasoup.types.Producer,
-    rtpCapabilities
+    rtpCapabilities,
   ) => {
     let consumer: mediasoup.types.Consumer | null = null;
     if (

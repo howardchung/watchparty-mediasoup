@@ -1,14 +1,12 @@
 {
-    "compilerOptions": {
-      "target": "es2020",
-      "allowJs": true,
-      "strict": true,
-      "esModuleInterop": true,
-      "module": "nodenext",
-      "noEmit": true,
-      "allowImportingTsExtensions": true,
-      "erasableSyntaxOnly": true,
-      "verbatimModuleSyntax": true
-    },
-    "include": ["./server.ts"]
-  }
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "nodenext",
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": ["./server.ts"]
+}

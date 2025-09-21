@@ -25,7 +25,7 @@ const workspaces = io.of(/^\/.*/);
 workspaces.on('connection', function (socket) {
   console.log(
     'client connected. socket id=' + getId(socket),
-    'namespace=' + socket.nsp
+    'namespace=' + socket.nsp,
   );
 
   socket.on('disconnect', function () {
@@ -151,7 +151,7 @@ workspaces.on('connection', function (socket) {
         const { consumer, params } = await createConsumer(
           transport,
           videoProducer,
-          data.rtpCapabilities
+          data.rtpCapabilities,
         ); // producer must exist before consume
         //subscribeConsumer = consumer;
         const id = getId(socket);
@@ -194,7 +194,7 @@ workspaces.on('connection', function (socket) {
         const { consumer, params } = await createConsumer(
           transport,
           audioProducer,
-          data.rtpCapabilities
+          data.rtpCapabilities,
         ); // producer must exist before consume
         //subscribeConsumer = consumer;
         const id = getId(socket);
@@ -431,7 +431,7 @@ function removeAudioConsumer(id) {
 
 async function createTransport() {
   const transport = await router.createWebRtcTransport(
-    mediasoupOptions.webRtcTransport
+    mediasoupOptions.webRtcTransport,
   );
   console.log('-- create transport id=' + transport.id);
   console.log(transport.iceCandidates);

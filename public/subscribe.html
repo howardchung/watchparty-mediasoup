@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -77,7 +77,7 @@
               console.warn(
                 'WARN: something wrong with clientID',
                 socket.io,
-                message.id
+                message.id,
               );
             }
 
@@ -95,12 +95,12 @@
             if (message.kind === 'video') {
               videoConsumer = await consumeAndResume(
                 consumerTransport,
-                message.kind
+                message.kind,
               );
             } else if (message.kind === 'audio') {
               audioConsumer = await consumeAndResume(
                 consumerTransport,
-                message.kind
+                message.kind,
               );
             }
           }
@@ -117,7 +117,7 @@
               ', localId=' +
               localId +
               ', kind=' +
-              kind
+              kind,
           );
           if (kind === 'video') {
             if (videoConsumer) {
@@ -310,7 +310,7 @@
             .catch(errback);
 
           //consumer = await consumeAndResume(consumerTransport);
-        }
+        },
       );
 
       consumerTransport.on('connectionstatechange', (state) => {
