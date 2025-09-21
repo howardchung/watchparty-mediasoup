@@ -1,10 +1,10 @@
-require('dotenv').config();
-import * as fs from 'fs';
+import 'dotenv/config';
+import * as fs from 'node:fs';
 import { Server } from 'socket.io';
 import * as mediasoup from 'mediasoup';
 import * as https from 'https';
 import * as http from 'http';
-import { execSync } from 'child_process';
+import { execSync } from 'node:child_process';
 
 let serverOptions = {
   listenPort: process.env.PORT || 80,

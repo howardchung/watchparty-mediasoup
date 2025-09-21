@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
-      "target": "es6",
+      "target": "es2020",
+      "allowJs": true,
+      "strict": true,
       "esModuleInterop": true,
-      "module": "commonjs"
+      "module": "nodenext",
+      "noEmit": true,
+      "allowImportingTsExtensions": true,
+      "erasableSyntaxOnly": true,
+      "verbatimModuleSyntax": true
     },
-    "files": ["server.ts"]
+    "include": ["./server.ts"]
   }
