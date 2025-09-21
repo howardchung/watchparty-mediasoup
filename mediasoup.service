@@ -1,0 +1,16 @@
+[Unit]
+Description="save in /etc/systemd/system/mediasoup.service, systemctl enable mediasoup.service, systemctl start mediasoup.service"
+
+[Service]
+ExecStart=npm start
+WorkingDirectory=/root/watchparty-mediasoup
+Restart=always
+RestartSec=3
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=MEDIASOUP
+Environment=NODE_ENV=production
+Environment=PORT=80
+
+[Install]
+WantedBy=multi-user.target

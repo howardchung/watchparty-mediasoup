@@ -5,9 +5,7 @@
   "main": "mediasoup_v3_broadcast.js",
   "scripts": {
     "start": "node server.ts",
-    "prettier": "npx prettier --single-quote --write .",
-    "typecheck": "tsc",
-    "pm2": "PORT=80 pm2 start server.ts --name mediasoup --interpreter node"
+    "prettier": "npx prettier --single-quote --write ."
   },
   "type": "module",
   "author": "howardc93",
@@ -15,10 +13,9 @@
   "dependencies": {
     "dotenv": "^17.2.2",
     "mediasoup": "^3.19.2",
-    "pm2": "^6.0.11",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "@types/node": "^24.5.2"
   }
 }
