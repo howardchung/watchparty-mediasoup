@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.ts",
     "prettier": "npx prettier --single-quote --write .",
-    "pm2": "PORT=80 pm2 start server.ts --name mediasoup"
+    "pm2": "PORT=80 pm2 start server.ts --name mediasoup --interpreter node"
   },
   "type": "module",
   "author": "howardc93",
