@@ -12,8 +12,8 @@ let serverOptions = {
 const key = process.env.SSL_KEY_FILE
   ? fs.readFileSync(process.env.SSL_KEY_FILE).toString()
   : '';
-const cert = process.env.SSL_CERT_FILE
-  ? fs.readFileSync(process.env.SSL_CERT_FILE).toString()
+const cert = process.env.SSL_CRT_FILE
+  ? fs.readFileSync(process.env.SSL_CRT_FILE).toString()
   : '';
 const server =
   key && cert
