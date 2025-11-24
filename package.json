@@ -11,11 +11,10 @@
   "author": "howardc93",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^17.2.2",
-    "mediasoup": "^3.19.2",
+    "mediasoup": "^3.19.12",
     "socket.io": "^4.8.1"
   },
   "devDependencies": {
-    "@types/node": "^24.5.2"
+    "@types/node": "^24.10.1"
   }
 }
