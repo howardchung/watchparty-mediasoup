@@ -5,7 +5,7 @@
   "main": "mediasoup_v3_broadcast.js",
   "scripts": {
     "start": "node server.ts",
-    "prettier": "npx prettier --single-quote --write ."
+    "prettier": "npx prettier --write ."
   },
   "type": "module",
   "author": "howardc93",

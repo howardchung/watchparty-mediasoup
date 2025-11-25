@@ -31,8 +31,8 @@
     <div id="remote_container"></div>
   </body>
   <script>
-    const remoteContainer = document.getElementById('remote_container');
-    const stateSpan = document.getElementById('state_span');
+    const remoteContainer = document.getElementById("remote_container");
+    const stateSpan = document.getElementById("state_span");
     let localStream = null;
     let clientId = null;
     let device = null;
@@ -58,46 +58,46 @@
 
       return new Promise((resolve, reject) => {
         // TODO connect to room namespace
-        socket = io.connect('/');
+        socket = io.connect("/");
 
-        socket.on('connect', function (evt) {
-          console.log('socket.io connected()');
+        socket.on("connect", function (evt) {
+          console.log("socket.io connected()");
         });
-        socket.on('error', function (err) {
-          console.error('socket.io ERROR:', err);
+        socket.on("error", function (err) {
+          console.error("socket.io ERROR:", err);
           reject(err);
         });
-        socket.on('disconnect', function (evt) {
-          console.log('socket.io disconnect:', evt);
+        socket.on("disconnect", function (evt) {
+          console.log("socket.io disconnect:", evt);
         });
-        socket.on('message', function (message) {
-          console.log('socket.io message:', message);
-          if (message.type === 'welcome') {
+        socket.on("message", function (message) {
+          console.log("socket.io message:", message);
+          if (message.type === "welcome") {
             if (socket.id !== message.id) {
               console.warn(
-                'WARN: something wrong with clientID',
+                "WARN: something wrong with clientID",
                 socket.io,
                 message.id,
               );
             }
 
             clientId = message.id;
-            console.log('connected to server. clientId=' + clientId);
+            console.log("connected to server. clientId=" + clientId);
             resolve();
           } else {
-            console.error('UNKNOWN message from server:', message);
+            console.error("UNKNOWN message from server:", message);
           }
         });
-        socket.on('newProducer', async function (message) {
-          console.log('socket.io newProducer:', message);
+        socket.on("newProducer", async function (message) {
+          console.log("socket.io newProducer:", message);
           if (consumerTransport) {
             // start consume
-            if (message.kind === 'video') {
+            if (message.kind === "video") {
               videoConsumer = await consumeAndResume(
                 consumerTransport,
                 message.kind,
               );
-            } else if (message.kind === 'audio') {
+            } else if (message.kind === "audio") {
               audioConsumer = await consumeAndResume(
                 consumerTransport,
                 message.kind,
@@ -106,25 +106,25 @@
           }
         });
 
-        socket.on('producerClosed', function (message) {
-          console.log('socket.io producerClosed:', message);
+        socket.on("producerClosed", function (message) {
+          console.log("socket.io producerClosed:", message);
           const localId = message.localId;
           const remoteId = message.remoteId;
           const kind = message.kind;
           console.log(
-            '--try removeConsumer remoteId=' +
+            "--try removeConsumer remoteId=" +
               remoteId +
-              ', localId=' +
+              ", localId=" +
               localId +
-              ', kind=' +
+              ", kind=" +
               kind,
           );
-          if (kind === 'video') {
+          if (kind === "video") {
             if (videoConsumer) {
               videoConsumer.close();
               videoConsumer = null;
             }
-          } else if (kind === 'audio') {
+          } else if (kind === "audio") {
             if (audioConsumer) {
               audioConsumer.close();
               audioConsumer = null;
@@ -145,7 +145,7 @@
         socket.close();
         socket = null;
         clientId = null;
-        console.log('socket.io closed..');
+        console.log("socket.io closed..");
       }
     }
 
@@ -186,7 +186,7 @@
     // return Promise
     function playVideo(element, stream) {
       if (element.srcObject) {
-        console.warn('element ALREADY playing, so ignore');
+        console.warn("element ALREADY playing, so ignore");
         return;
       }
       element.srcObject = stream;
@@ -217,42 +217,42 @@
           video.volume = 1.0;
         })
         .catch((err) => {
-          console.error('media ERROR:', err);
+          console.error("media ERROR:", err);
         });
     }
 
     function addRemoteVideo(id) {
       let existElement = findRemoteVideo(id);
       if (existElement) {
-        console.warn('remoteVideo element ALREADY exist for id=' + id);
+        console.warn("remoteVideo element ALREADY exist for id=" + id);
         return existElement;
       }
 
-      let element = document.createElement('video');
+      let element = document.createElement("video");
       remoteContainer.appendChild(element);
-      element.id = 'remote_' + id;
+      element.id = "remote_" + id;
       element.width = 1280;
       element.height = 720;
       element.volume = 0;
       //element.controls = true;
-      element.style = 'border: solid black 1px;';
+      element.style = "border: solid black 1px;";
       return element;
     }
 
     function findRemoteVideo(id) {
-      let element = document.getElementById('remote_' + id);
+      let element = document.getElementById("remote_" + id);
       return element;
     }
 
     function removeRemoteVideo(id) {
-      console.log(' ---- removeRemoteVideo() id=' + id);
-      let element = document.getElementById('remote_' + id);
+      console.log(" ---- removeRemoteVideo() id=" + id);
+      let element = document.getElementById("remote_" + id);
       if (element) {
         element.pause();
         element.srcObject = null;
         remoteContainer.removeChild(element);
       } else {
-        console.log('child element NOT FOUND');
+        console.log("child element NOT FOUND");
       }
     }
 
@@ -274,19 +274,19 @@
         });
 
         // --- get capabilities --
-        const data = await sendRequest('getRouterRtpCapabilities', {});
-        console.log('getRouterRtpCapabilities:', data);
+        const data = await sendRequest("getRouterRtpCapabilities", {});
+        console.log("getRouterRtpCapabilities:", data);
         await loadDevice(data);
       }
 
       updateButtons();
 
       // --- prepare transport ---
-      console.log('--- createConsumerTransport --');
-      const params = await sendRequest('createConsumerTransport', {});
-      console.log('transport params:', params);
+      console.log("--- createConsumerTransport --");
+      const params = await sendRequest("createConsumerTransport", {});
+      console.log("transport params:", params);
       consumerTransport = device.createRecvTransport(params);
-      console.log('createConsumerTransport:', consumerTransport);
+      console.log("createConsumerTransport:", consumerTransport);
 
       // --- NG ---
       //sendRequest('connectConsumerTransport', { dtlsParameters: dtlsParameters })
@@ -300,10 +300,10 @@
 
       // --- join & start publish --
       consumerTransport.on(
-        'connect',
+        "connect",
         async ({ dtlsParameters }, callback, errback) => {
-          console.log('--consumer trasnport connect');
-          sendRequest('connectConsumerTransport', {
+          console.log("--consumer trasnport connect");
+          sendRequest("connectConsumerTransport", {
             dtlsParameters: dtlsParameters,
           })
             .then(callback)
@@ -313,18 +313,18 @@
         },
       );
 
-      consumerTransport.on('connectionstatechange', (state) => {
+      consumerTransport.on("connectionstatechange", (state) => {
         switch (state) {
-          case 'connecting':
-            console.log('subscribing...');
+          case "connecting":
+            console.log("subscribing...");
             break;
 
-          case 'connected':
-            console.log('subscribed');
+          case "connected":
+            console.log("subscribed");
             break;
 
-          case 'failed':
-            console.log('failed');
+          case "failed":
+            console.log("failed");
             producerTransport.close();
             break;
 
@@ -333,8 +333,8 @@
         }
       });
 
-      videoConsumer = await consumeAndResume(consumerTransport, 'video');
-      audioConsumer = await consumeAndResume(consumerTransport, 'audio');
+      videoConsumer = await consumeAndResume(consumerTransport, "video");
+      audioConsumer = await consumeAndResume(consumerTransport, "audio");
 
       updateButtons();
     }
@@ -342,24 +342,24 @@
     async function consumeAndResume(transport, kind) {
       const consumer = await consume(consumerTransport, kind);
       if (consumer) {
-        console.log('-- track exist, consumer ready. kind=' + kind);
+        console.log("-- track exist, consumer ready. kind=" + kind);
         updateButtons();
-        if (kind === 'video') {
-          console.log('-- resume kind=' + kind);
-          sendRequest('resume', { kind: kind })
+        if (kind === "video") {
+          console.log("-- resume kind=" + kind);
+          sendRequest("resume", { kind: kind })
             .then(() => {
-              console.log('resume OK');
+              console.log("resume OK");
               return consumer;
             })
             .catch((err) => {
-              console.error('resume ERROR:', err);
+              console.error("resume ERROR:", err);
               return consumer;
             });
         } else {
-          console.log('-- do not resume kind=' + kind);
+          console.log("-- do not resume kind=" + kind);
         }
       } else {
-        console.log('-- no consumer yet. kind=' + kind);
+        console.log("-- no consumer yet. kind=" + kind);
         return null;
       }
     }
@@ -388,22 +388,22 @@
       try {
         device = new MediasoupClient.Device();
       } catch (error) {
-        if (error.name === 'UnsupportedError') {
-          console.error('browser not supported');
+        if (error.name === "UnsupportedError") {
+          console.error("browser not supported");
         }
       }
       await device.load({ routerRtpCapabilities });
     }
 
     async function consume(transport, trackKind) {
-      console.log('--start of consume --kind=' + trackKind);
+      console.log("--start of consume --kind=" + trackKind);
       const { rtpCapabilities } = device;
       //const data = await socket.request('consume', { rtpCapabilities });
-      const data = await sendRequest('consume', {
+      const data = await sendRequest("consume", {
         rtpCapabilities: rtpCapabilities,
         kind: trackKind,
       }).catch((err) => {
-        console.error('consume ERROR:', err);
+        console.error("consume ERROR:", err);
       });
       const { producerId, id, kind, rtpParameters } = data;
 
@@ -421,12 +421,12 @@
 
         addRemoteTrack(clientId, consumer.track);
 
-        console.log('--end of consume');
+        console.log("--end of consume");
         //return stream;
 
         return consumer;
       } else {
-        console.warn('--- remote producer NOT READY');
+        console.warn("--- remote producer NOT READY");
 
         return null;
       }
@@ -435,33 +435,33 @@
     // ---- UI control ----
     function updateButtons() {
       if (isSocketConnected()) {
-        enabelElement('disconnect_button');
+        enabelElement("disconnect_button");
       } else {
-        disableElement('disconnect_button');
+        disableElement("disconnect_button");
       }
 
       if (consumerTransport) {
-        disableElement('subscribe_button');
+        disableElement("subscribe_button");
       } else {
-        enabelElement('subscribe_button');
+        enabelElement("subscribe_button");
       }
     }
 
     function enabelElement(id) {
       let element = document.getElementById(id);
       if (element) {
-        element.removeAttribute('disabled');
+        element.removeAttribute("disabled");
       }
     }
 
     function disableElement(id) {
       let element = document.getElementById(id);
       if (element) {
-        element.setAttribute('disabled', '1');
+        element.setAttribute("disabled", "1");
       }
     }
 
     updateButtons();
-    console.log('=== ready ===');
+    console.log("=== ready ===");
   </script>
 </html>
