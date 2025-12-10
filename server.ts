@@ -1,4 +1,3 @@
-import "dotenv/config";
 import * as fs from "node:fs";
 import { Server } from "socket.io";
 import * as mediasoup from "mediasoup";

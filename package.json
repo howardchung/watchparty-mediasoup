@@ -4,7 +4,7 @@
   "description": "WebRTC SFU mediaosup v3 example",
   "main": "mediasoup_v3_broadcast.js",
   "scripts": {
-    "start": "node server.ts",
+    "start": "node --env-file-if-exists=.env server.ts",
     "prettier": "npx prettier --write ."
   },
   "type": "module",
